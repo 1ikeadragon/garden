@@ -21,12 +21,12 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
-      fontOrigin: "googleFonts",
       cdnCaching: true,
+      fontOrigin: "googleFonts",
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "EB Garamond",
+        body: "EB Garamond",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
