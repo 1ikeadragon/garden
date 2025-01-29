@@ -22,3 +22,75 @@ The prompt:
 
 Downloaded the `babyrng.tar.gz` tarball, extracted it to find  a `Dockerfile`,  the `source.hs`, and `output.txt`. Didn't have Haskell toolchain installed so started building the image.
 ![[docker-build-baberng.png]]
+Ran a container with the image and got the output
+```sh
+
+```
+
+Hmm, interesting -- time to read the src now.
+`source.hs`
+```haskell
+{-# LANGUAGE ScopedTypeVariables #-}
+
+import Control.Monad.State.Lazy (evalState, State, state)
+
+import Data.Bits (xor)
+
+import Data.Char (chr, ord)
+
+import Data.Word (Word64)
+
+import System.Random (getStdGen, StdGen, uniform, uniformR)
+
+import Text.Printf (printf)
+
+  
+
+flag = "MVM{[REDACTED]}"
+
+  
+
+shred :: String -> State StdGen String
+
+shred "" = return ""
+
+shred (c:cs) = do
+
+k <- state $ uniformR (0, 255)
+
+((:) (chr $ (ord c) `xor` k)) <$> (shred cs)
+
+  
+
+burryTreasure :: State StdGen String
+
+burryTreasure = do
+
+shredded <- shred flag
+
+x :: Word64 <- state uniform
+
+y :: Word64 <- state uniform
+
+return $ printf "The shredded flag (%s) has been buried at (%d, %d)" (shredded >>= (printf "%02x" :: Char -> String)) x y
+
+  
+
+main :: IO ()
+
+main = do
+
+rng <- getStdGen
+
+putStrLn $ evalState burryTreasure rng
+```
+
+Honest first reaction
+
+Anyway, I started reading. It was just a ~30 line source file, from the looks of it not much going on we have a variable of type string defined which is the flag then some transformations on it which I can't really make sense of.
+
+What next? Deepseek? GPT?
+
+Nah -- we raw dog it.
+![[ctf meme.png]]
+And so I went head first into Haskell docs and tutorials to try and make sense of the spaghetti I see.
