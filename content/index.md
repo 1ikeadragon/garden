@@ -22,7 +22,7 @@ Fair disclaimer before you interact with me -- am a bit acoustic and have ADHD. 
 ## ./goodreads
 Currently reading:
 - Maybe You Should Talk to Someone - Lori Gottelieb
-- Serious Cryptography 2nd Edition - Jean-Philippe Aumassion
+- Serious Cryptography 2nd Edition - Jean-Philippe Aumasson
 - The Body Keeps Score - Bessel Van Der Kolk
 
 
