@@ -62,9 +62,7 @@ main = do
 	putStrLn $ evalState burryTreasure rng
 ```
 
-Honest first reaction
-
-Anyway, I started reading. It was just a ~30 line source file, from the looks of it not much going on we have a variable of type string defined which is the flag then some transformations on it which I can't really make sense of.
+It was a ~30 line source file, from the looks of it not much going on we have a variable of type string defined which is the flag then some transformations on it which I can't really make sense of.
 
 What next? Deepseek? GPT?
 
