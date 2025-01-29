@@ -1,5 +1,7 @@
 ---
 title: 2 hour long demo of bad parenting — The Tree of Life (2011)
+tags: review
+draft: true
 ---
 I couldn't stomach it after the 1H:23M mark. The abuse was much. A troubled father using his kids as an outlet of his frustration, controlling his wife, and spinning up a dictatorship within the walls of his house and yard.
 
