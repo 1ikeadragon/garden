@@ -3,16 +3,6 @@
 // put your custom CSS here!
 @use "./variables.scss" as *;
 
-
-page {
-    .page-title {
-        font-family: "DM Serif Display";
-    }
-    font-family: "Bricolage Grotesque", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    }
-
 body[data-slug="index"] img {
   filter: invert(0%);
   opacity: 0.85;
