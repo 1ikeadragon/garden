@@ -24,7 +24,7 @@ Downloaded the `babyrng.tar.gz` tarball, extracted it to find  a `Dockerfile`,  
 ![[docker-build-baberng.png]]
 Ran a container with the image and got the output
 ```sh
-
+The shredded flag (f942732a0041b935d69547486eafe8) has been buried at (17234233598314619506, 13831628640053652072)
 ```
 
 Hmm, interesting -- time to read the src now.
@@ -33,56 +33,33 @@ Hmm, interesting -- time to read the src now.
 {-# LANGUAGE ScopedTypeVariables #-}
 
 import Control.Monad.State.Lazy (evalState, State, state)
-
 import Data.Bits (xor)
-
 import Data.Char (chr, ord)
-
 import Data.Word (Word64)
-
 import System.Random (getStdGen, StdGen, uniform, uniformR)
-
 import Text.Printf (printf)
 
   
-
 flag = "MVM{[REDACTED]}"
 
-  
-
 shred :: String -> State StdGen String
-
 shred "" = return ""
-
 shred (c:cs) = do
 
-k <- state $ uniformR (0, 255)
-
-((:) (chr $ (ord c) `xor` k)) <$> (shred cs)
-
-  
+	k <- state $ uniformR (0, 255)
+	((:) (chr $ (ord c) `xor` k)) <$> (shred cs)
 
 burryTreasure :: State StdGen String
-
 burryTreasure = do
-
-shredded <- shred flag
-
-x :: Word64 <- state uniform
-
-y :: Word64 <- state uniform
-
-return $ printf "The shredded flag (%s) has been buried at (%d, %d)" (shredded >>= (printf "%02x" :: Char -> String)) x y
-
-  
+	shredded <- shred flag
+	x :: Word64 <- state uniform
+	y :: Word64 <- state uniform
+	return $ printf "The shredded flag (%s) has been buried at (%d, %d)" (shredded >>= (printf "%02x" :: Char -> String)) x y
 
 main :: IO ()
-
 main = do
-
-rng <- getStdGen
-
-putStrLn $ evalState burryTreasure rng
+	rng <- getStdGen
+	putStrLn $ evalState burryTreasure rng
 ```
 
 Honest first reaction
