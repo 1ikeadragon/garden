@@ -1,14 +1,15 @@
 ---
-title: XSS again.
+title: XSS, again.
 tags:
   - websec
+draft: true
 ---
 
 XSS is probably one of the oldest web vulns. It has been explained, then once more, and once more, and again by all/any security content creators.
 
 But, I'll do it once more because, why not.
 
-### Types of XSS
+## ./la familia de XSS
 Contrary to popular belief (*read: trash internet articles*) there are **NOT** only three types of XSS — Stored XSS, Reflected XSS, and DOM XSS.
 
 It's such a shallow degradation of the beauty and the beast the vuln that is XSS. There's more to it. Types of XSS depend on the attack vector.

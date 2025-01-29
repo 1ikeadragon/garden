@@ -4,6 +4,7 @@ tags:
   - bug-bounty
   - websec
 date: 2024-12-18
+draft: true
 ---
 Recon is a big part of getting your bounties, probably the most important when you're dealing with __ran through__ targets. You'll see some hunters say, "as a beginner, don't do recon".
 
