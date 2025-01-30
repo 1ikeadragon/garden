@@ -4,6 +4,7 @@ tags:
   - review
   - thoughts
 draft: false
+date: 2024-12-14
 ---
 I couldn't stomach it after the 1H:23M mark. The abuse was too much. A troubled father using his kids as an outlet of his frustration, controlling his wife, and spinning up a dictatorship within the walls of his house and yard.
 
