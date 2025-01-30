@@ -1,8 +1,9 @@
 ---
-title: x3CTF babyrng Writeup
+title: x3CTF babyrng writeup
 tags:
   - ctf
   - crypto
+  - technical
 draft: false
 date: 2025-01-30
 ---

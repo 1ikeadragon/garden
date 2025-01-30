@@ -2,6 +2,7 @@
 title: XSS, again.
 tags:
   - websec
+  - technical
 draft: true
 ---
 

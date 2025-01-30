@@ -3,6 +3,7 @@ title: Wide recon for better bounties.
 tags:
   - bug-bounty
   - websec
+  - technical
 date: 2024-12-18
 draft: true
 ---
