@@ -38,20 +38,25 @@ export const defaultContentPageLayout: PageLayout = {
         limit: 3,
         filter: (f) =>
           f.slug!.startsWith("posts/") && f.slug! !== "posts/index" && !f.frontmatter?.noindex,
+          showTags: false,
         linkToMore: "posts/" as SimpleSlug,
       }),
     ),
     Component.DesktopOnly(
       Component.RecentNotes({
+        
         title: "Recent Notes",
         limit: 2,
         filter: (f) => f.slug!.startsWith("thoughts/"),
+        showTags: false,
         linkToMore: "thoughts/" as SimpleSlug,
       }),
     ),
   ],
   right: [
-    Component.DesktopOnly(Component.TableOfContents()),
+    Component.DesktopOnly(Component.TableOfContents({
+      
+    })),
     Component.Backlinks(),
   ],
 }

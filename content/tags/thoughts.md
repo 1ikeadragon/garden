@@ -1,4 +1,4 @@
 ---
 title: "Thoughts"
-description: "Pieces of my mind."
+description: "Experiences and how my mind processed them."
 ---

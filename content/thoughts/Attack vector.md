@@ -2,6 +2,6 @@
 title: Attack vector
 tags:
   - glossary
-  - technical
 draft: false
 ---
+Attack vector

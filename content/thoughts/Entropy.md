@@ -1,8 +1,7 @@
 ---
-title: Attack vector
+title: Entropy
 tags:
   - glossary
   - crypto
-  - technical
 draft: false
 ---
