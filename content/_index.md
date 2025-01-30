@@ -1,5 +1,6 @@
 ---
 title: Vulnerability research and life ramblings.
+date: 2025-01-01
 ---
 ## ./whoami
 
