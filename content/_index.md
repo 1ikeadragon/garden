@@ -30,5 +30,5 @@ Currently reading:
 ## ./projects
 Cooked from scratch or, OSS commits:
 - Vector35/Debugger: Debugger component for the Binary Ninja Reverse engineering platform.
-    - Added F4 keybinding for action Run To Here. [#663](https://github.com/Vector35/debugger/pull/663)
+    - Added F4 keybinding for action Run To Here. 
     - Added support for more LLIL architectures.

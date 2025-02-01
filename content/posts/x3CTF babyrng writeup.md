@@ -31,16 +31,6 @@ The shredded flag (f942732a0041b935d69547486eafe8) has been buried at (172342335
 Hmm, interesting -- time to read the src now.
 `source.hs`
 ```haskell
-{-# LANGUAGE ScopedTypeVariables #-}
-
-import Control.Monad.State.Lazy (evalState, State, state)
-import Data.Bits (xor)
-import Data.Char (chr, ord)
-import Data.Word (Word64)
-import System.Random (getStdGen, StdGen, uniform, uniformR)
-import Text.Printf (printf)
-
-  
 flag = "MVM{[REDACTED]}"
 
 shred :: String -> State StdGen String
@@ -63,10 +53,20 @@ main = do
 	putStrLn $ evalState burryTreasure rng
 ```
 
-It was a ~30 line source file, from the looks of it not much going on we have a variable of type string defined which is the flag then some transformations on it which I can't really make sense of.
+It was a ~20 line source file, from the looks of it not much going on we have a variable of type string defined which is the flag then some transformations on it which I can't really make sense of.
 
 What next? Deepseek? GPT?
 
 Nah -- we raw dog it.
 ![[ctf meme.png]]
 And so I went head first into Haskell docs and tutorials to try and make sense of the spaghetti I see.
+## ./OSINT it, we ball
+
+Clearly I'm not the sharpest Haskell engineer on the block so, we switch from cryptanalysis to OSINT mode.
+Taking it step by step I wanted to get an overview of the packages that are being used. 
+### `Data`
+
+### `System.Random`
+
+
+
