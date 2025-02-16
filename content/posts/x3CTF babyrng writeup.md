@@ -62,8 +62,9 @@ Nah -- we raw dog it.
 And so I went head first into Haskell docs and tutorials to try and make sense of the spaghetti I see.
 ## ./OSINT it, we ball
 
-Clearly I'm not the sharpest Haskell engineer on the block so, we switch from cryptanalysis to OSINT mode.
-Taking it step by step I wanted to get an overview of the packages that are being used. 
+After getting a feel for the Haskell syntax and ecosystem, wrote a few programs to get a better grasp on the syntax. Big shoutout to these videos 1,2,3, which gave me enough Haskell literacy to do the chall. Now with resume-mention-worthy syntax grasp, the actual chall reversing starts.
+
+Clearly I'm not the sharpest Haskell engineer on the block so, we switch from cryptanalysis to OSINT mode. First, got an overview of the packages that are being used. Interesting ones:
 ### `Data`
 
 ### `System.Random`

@@ -1,5 +1,5 @@
 ---
-title: Into GraalVM
+title: AoT compilation with GraalVM
 tags:
   - programming
   - technical

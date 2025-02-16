@@ -10,6 +10,7 @@ XSS is probably one of the oldest web vulns. It has been explained, then once mo
 
 But, I'll do it once more because, why not.
 
+---
 ## ./la familia de XSS
 Contrary to popular belief (*read: trash internet articles*) there are **NOT** only three types of XSS — Stored XSS, Reflected XSS, and DOM XSS.
 
