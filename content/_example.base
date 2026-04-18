@@ -1,0 +1,6 @@
+summaries:
+  count: values.length
+filters:
+  and:
+    - file.ext == "md"
+formulas: {}

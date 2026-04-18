@@ -1,5 +1,0 @@
-CompileFlags:
-  Add:
-    - -include
-    - prelude.h
-    - -std=c++17

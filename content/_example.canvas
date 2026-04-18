@@ -1,0 +1,14 @@
+{
+	"nodes": [
+		{
+			"id": "a1",
+			"type": "text",
+			"text": "Canvas files are visual knowledge maps rendered by Quartz. Add nodes and edges to build diagrams.",
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 200
+		}
+	],
+	"edges": []
+}
