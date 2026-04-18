@@ -23,7 +23,7 @@ export default (() =>
     return (
       <section data-recs class={classNames(displayClass, 'recommendations', 'main-col')}>
         <h2 id="recommendations-label" lang="en">
-          vous pourriez aimer ce qui suit
+          you might also like
         </h2>
         <menu class="overflow">
           {recs.map(file => (
