@@ -1586,12 +1586,12 @@ const HyperlinksComponent = ((props?: { children: JSX.Element[] }) => {
 const ElementComponent = ((enableRecents: boolean = false) => {
   const Content = ContentConstructor()
   const RecentNotes = NotesComponent({
-    header: 'récentes',
+    header: 'recent',
     slug: 'thoughts/' as SimpleSlug,
     numLimits: 9,
   })
   const RecentPosts = NotesComponent({
-    header: 'écriture',
+    header: 'writing',
     slug: 'posts/' as SimpleSlug,
     numLimits: 6,
   })
@@ -1677,9 +1677,9 @@ export const CuriusContent: QuartzComponent = (props: QuartzComponentProps) => {
             </div>
             <div class="curius-title">
               <em>
-                Voir de plus{' '}
-                <a href="https://curius.app/aaron-pham" target="_blank">
-                  curius.app/aaron-pham
+                See more on{' '}
+                <a href="https://curius.app" target="_blank">
+                  curius.app
                 </a>
               </em>
             </div>

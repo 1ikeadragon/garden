@@ -44,18 +44,18 @@ export default (() => {
     const meta: MetaProp[] = []
     if (created !== undefined) {
       meta.push({
-        title: 'publié à',
+        title: 'published',
         classes: ['published-time'],
         item: h(
           'span',
-          { class: 'page-creation', title: `Date de création du contenu de la page (${created})` },
+          { class: 'page-creation', title: `Page creation date (${created})` },
           [h('em', {}, [<DateComponent date={created} locale={locale} />])],
         ),
       })
     }
     if (modified !== undefined) {
       meta.push({
-        title: 'modifié à',
+        title: 'modified',
         classes: ['modified-time'],
         item: h(
           'span',
@@ -65,7 +65,7 @@ export default (() => {
       })
     }
 
-    meta.push({ title: 'durée', classes: ['reading-time'], item: h('span', {}, [displayedTime]) })
+    meta.push({ title: 'reading time', classes: ['reading-time'], item: h('span', {}, [displayedTime]) })
 
     if (fileData.frontmatter?.protected !== true) {
       meta.push({

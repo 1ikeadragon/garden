@@ -13,24 +13,23 @@ interface Options {
 }
 
 export const KeybindAlias = {
-  'cmd+/': 'recherche',
-  'cmd+\\': "page d'accueil",
+  'cmd+/': 'search',
+  'cmd+\\': 'home',
   'cmd+j': 'curius',
-  'cmd+.': 'arena',
   'cmd+i': 'stream',
-  'cmd+b': 'lecteur',
-  'cmd+g': 'graphique',
+  'cmd+b': 'reader',
+  'cmd+g': 'graph',
   'cmd+o': 'opener',
   'cmd+p': 'connector',
-  "cmd+'": 'aide raccourcis',
-  gh: 'navigation des titres',
-  D: 'mode sombre/clair/système',
-  f: 'mode de sélection de liens',
-  'j/k': 'défiler haut/bas',
-  gg: 'aller au début',
-  G: 'aller à la fin',
-  'ctrl+d/u': 'demi-page haut/bas',
-  'H/M/L': 'haut/milieu/bas du viewport',
+  "cmd+'": 'keyboard shortcuts',
+  gh: 'heading navigation',
+  D: 'dark/light mode',
+  f: 'link selection mode',
+  'j/k': 'scroll up/down',
+  gg: 'go to top',
+  G: 'go to bottom',
+  'ctrl+d/u': 'half page up/down',
+  'H/M/L': 'top/middle/bottom of viewport',
 }
 
 const defaultOptions: Options = { default: ["⌘ '", "⌃ '"] }

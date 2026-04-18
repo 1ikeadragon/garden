@@ -78,7 +78,7 @@ export default (() => {
           </li>
           {socialsEntries.length > 0 && (
             <li class="socials">
-              <h2>média</h2>
+              <h2>media</h2>
               <ul>
                 {socialsEntries.map(([social, link]) => {
                   const linkValue = normalizeSocialLink(link)

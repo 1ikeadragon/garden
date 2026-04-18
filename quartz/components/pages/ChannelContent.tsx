@@ -468,7 +468,7 @@ export default (() => {
 
       if (socials && Object.keys(socials).length > 0) {
         metadataEntries.push({
-          label: 'média',
+          label: 'media',
           value: (
             <span class="arena-meta-socials">
               {Object.entries(socials).map(([name, link]) => {
@@ -799,10 +799,10 @@ export default (() => {
               type="text"
               id="arena-search-bar"
               class="arena-search-input"
-              placeholder="rechercher ce canal..."
+              placeholder="search this channel..."
               data-search-scope="channel"
               data-channel-slug={channel.slug}
-              aria-label="Rechercher ce canal"
+              aria-label="Search this channel"
               aria-keyshortcuts="Meta+K Control+K"
             />
             <svg

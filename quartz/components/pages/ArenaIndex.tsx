@@ -93,9 +93,9 @@ export default (() => {
             type="text"
             id="arena-search-bar"
             class="arena-search-input"
-            placeholder="rechercher tous les canaux..."
+            placeholder="search all channels..."
             data-search-scope="index"
-            aria-label="Rechercher tous les canaux"
+            aria-label="Search all channels"
             aria-keyshortcuts="Meta+K Control+K"
           />
           <svg

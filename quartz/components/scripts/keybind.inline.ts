@@ -69,8 +69,8 @@ _mapping.set('\\', '/')
 _mapping.set('j', '/curius')
 
 const aliases: Record<string, { mac: string; def: string }> = {
-  recherche: { mac: '/', def: 'k' },
-  graphique: { mac: ';', def: 'g' },
+  search: { mac: '/', def: 'k' },
+  graph: { mac: ';', def: 'g' },
 }
 
 // Scroll amount in pixels per key press
@@ -133,7 +133,7 @@ async function showVimiumWarning() {
   // Use the toast event system with a long duration (30 seconds)
   const event: CustomEventMap['toast'] = new CustomEvent('toast', {
     detail: {
-      message: "vimium détecté. désactivez l'extension pour une navigation optimale.",
+      message: "vimium detected. disable the extension for optimal navigation.",
       containerId: 'vimium-toast-container',
       durationMs: 30000, // 30 seconds
     },

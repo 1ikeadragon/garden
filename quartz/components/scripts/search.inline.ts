@@ -244,9 +244,9 @@ async function setupSearch(
 
   if (!el) {
     const keys = [
-      { kbd: '↑↓', description: 'pour naviguer' },
-      { kbd: '↵', description: 'pour ouvrir' },
-      { kbd: 'esc', description: 'pour rejeter' },
+      { kbd: '↑↓', description: 'to navigate' },
+      { kbd: '↵', description: 'to open' },
+      { kbd: 'esc', description: 'to dismiss' },
     ]
     const helper = document.createElement('ul')
     helper.id = 'helper'

@@ -226,7 +226,6 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.NotebookViewer(),
       Plugin.Static(),
-      Plugin.Favicon(),
       Plugin.NotFoundPage(),
       Plugin.CustomOgImages(),
       Plugin.PressKit(),

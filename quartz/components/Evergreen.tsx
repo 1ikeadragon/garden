@@ -99,7 +99,7 @@ export const EvergreenPermanentNotes = ((userOpts?: EvergreenNotes) =>
               [
                 h('div', { class: 'title' }, [key]),
                 h('div', { class: 'description' }, [
-                  pages.length === 1 ? '1 élément' : `${pages.length} éléments`,
+                  pages.length === 1 ? '1 item' : `${pages.length} items`,
                 ]),
               ],
             ),

@@ -407,8 +407,8 @@ class StackedNoteManager {
       protectedDiv.innerHTML = `
         <div class="protected-overlay">
           <div class="protected-message">
-            <p>ce contenu est protégé</p>
-            <p class="protected-hint">visitez la page principale pour y accéder</p>
+            <p>this content is protected</p>
+            <p class="protected-hint">visit the main page to access it</p>
           </div>
         </div>
       `
@@ -499,7 +499,7 @@ class StackedNoteManager {
         if (date) {
           const dateContent = document.createElement('div')
           dateContent.classList.add('published')
-          dateContent.innerHTML = `<span lang="fr" class="metadata" dir="auto">dernière modification par <time datetime=${date.toISOString()}>${formatDate(date)}</time> (${el.readingTime ? el.readingTime.minutes! : 0} min de lecture)</span>`
+          dateContent.innerHTML = `<span lang="en" class="metadata" dir="auto">last modified <time datetime=${date.toISOString()}>${formatDate(date)}</time> (${el.readingTime ? el.readingTime.minutes! : 0} min read)</span>`
           noteContent.append(dateContent)
         }
       }
@@ -565,12 +565,12 @@ class StackedNoteManager {
       const onKeyDown = (ev: KeyboardEvent) => {
         const link = ev.target as HTMLAnchorElement
         if (ev.altKey && !link.title) {
-          link.title = 'pour ajouter à la fin de la pile'
+          link.title = 'alt+click to add to stack'
         }
       }
       const onKeyUp = (ev: KeyboardEvent) => {
         const link = ev.target as HTMLAnchorElement
-        if (!ev.altKey && link.title === 'pour ajouter à la fin de la pile') {
+        if (!ev.altKey && link.title === 'alt+click to add to stack') {
           link.title = ''
         }
       }
@@ -684,12 +684,12 @@ class StackedNoteManager {
       const onKeyDown = (ev: KeyboardEvent) => {
         const link = ev.target as HTMLAnchorElement
         if (ev.altKey && !link.title) {
-          link.title = 'pour ajouter à la fin de la pile'
+          link.title = 'alt+click to add to stack'
         }
       }
       const onKeyUp = (ev: KeyboardEvent) => {
         const link = ev.target as HTMLAnchorElement
-        if (!ev.altKey && link.title === 'pour ajouter à la fin de la pile') {
+        if (!ev.altKey && link.title === 'alt+click to add to stack') {
           link.title = ''
         }
       }

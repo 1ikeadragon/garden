@@ -92,12 +92,12 @@ function buildMetadataFooter(entry: ContentIndexEntry | undefined): string {
   const readingTime = entry.readingTime?.minutes || 0
 
   return `<div class="published">
-  <span lang="fr" class="metadata" dir="auto">dernière modification par <time datetime="${date.toISOString()}">${formatDate(date)}</time> (${readingTime} min de lecture)</span>
+  <span lang="en" class="metadata" dir="auto">last modified <time datetime="${date.toISOString()}">${formatDate(date)}</time> (${readingTime} min read)</span>
 </div>`
 }
 
 function formatDate(date: Date): string {
-  return date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: '2-digit' })
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
 }
 
 async function fetchNoteData(

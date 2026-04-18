@@ -16,7 +16,7 @@ const fetchLinksHeaders: RequestInit = {
 async function loadPage(page: number) {
   const fetchText = document.getElementById('curius-fetching-text')
   if (fetchText) {
-    fetchText.textContent = 'Récupération des liens curius'
+    fetchText.textContent = 'Fetching curius links'
     fetchText.classList.toggle('active', true)
   }
 
@@ -55,13 +55,13 @@ async function renderPage(page: number): Promise<boolean> {
   if (linksData.length === 0) {
     if (page === 0) {
       removeAllChildren(fragment)
-      fragment.innerHTML = `<p>Échec de la récupération des liens.</p>`
+      fragment.innerHTML = `<p>Failed to fetch links.</p>`
       window.curiusState = { currentPage: 0, hasMore: false }
       updateNavigation()
     } else {
       const fetchText = document.getElementById('curius-fetching-text')
       if (fetchText) {
-        fetchText.textContent = "Pas d'autres liens pour le moment"
+        fetchText.textContent = "No more links for now"
         fetchText.classList.toggle('active', true)
         window.setTimeout(() => fetchText.classList.toggle('active', false), 1500)
       }

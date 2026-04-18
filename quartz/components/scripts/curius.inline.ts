@@ -29,7 +29,7 @@ document.addEventListener('nav', async e => {
   const friends = document.querySelector<HTMLUListElement>('.curius-friends')
   const trails = document.getElementsByClassName('curius-trail')[0] as HTMLDivElement
 
-  fetchText!.textContent = 'Récupération des liens curius'
+  fetchText!.textContent = 'Fetching curius links'
   fetchText!.classList.toggle('active', true)
 
   const [resp, searchLinks] = await Promise.all([fetchCuriusLinks(), fetchSearchLinks()])
@@ -38,7 +38,7 @@ document.addEventListener('nav', async e => {
 
   const callIfEmpty = (data: Link[]) => {
     if (data.length === 0) {
-      container!.innerHTML = `<p>Échec de la récupération des liens.</p>`
+      container!.innerHTML = `<p>Failed to fetch links.</p>`
       return []
     }
     return data.filter(link => link.trails.length === 0)
