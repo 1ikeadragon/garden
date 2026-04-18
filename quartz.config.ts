@@ -7,8 +7,8 @@ const configuration: GlobalConfiguration = {
   enableSPA: true,
   enablePopovers: true,
   analytics: { provider: 'plausible' },
-  locale: 'fr-FR',
-  baseUrl: 'aarnphm.xyz',
+  locale: 'en-US',
+  baseUrl: 'stateless.computer',
   ignorePatterns: [
     'private',
     'templates',
@@ -133,7 +133,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents({ maxDepth: 5 }),
       Plugin.LLM(),
       Plugin.Slides(),
-      Plugin.Arena(),
+
       Plugin.Stream(),
       Plugin.Protected(),
     ],
@@ -231,7 +231,7 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
       Plugin.PressKit(),
       Plugin.SlidesPage(),
-      Plugin.ArenaPage(),
+
       Plugin.BasePage(),
       Plugin.StreamPage(),
       Plugin.StreamIndex(),

@@ -233,7 +233,7 @@ export const Citations: QuartzTransformerPlugin<Options> = (opts?: Options) => {
               h(
                 'section.bibliography',
                 { dataReferences: true },
-                h('h2#reference-label', [{ type: 'text', value: 'bibliographie' }]),
+                h('h2#reference-label', [{ type: 'text', value: 'bibliography' }]),
                 h('ul', ...entries),
               ),
             )

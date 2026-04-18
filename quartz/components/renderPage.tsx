@@ -1349,7 +1349,7 @@ export function transcludeFinal(
               h(
                 'h2#reference-label',
                 { dir: 'auto' },
-                h('span.highlight-span', [{ type: 'text', value: 'bibliographie' }]),
+                h('span.highlight-span', [{ type: 'text', value: 'bibliography' }]),
               ),
               { type: 'text', value: '\n' },
               h('ul', { dir: 'auto' }, [...filteredBibs]),
@@ -1600,13 +1600,9 @@ const ElementComponent = ((enableRecents: boolean = false) => {
     const Hyperlink = HyperlinksComponent({
       children: [
         <section style={{ marginTop: '0.9em' }}>
-          <em>jardin</em>
+          <em>garden</em>
           <address class="clickable-container">
-            <AliasLink newTab classes={['external']} name="notes" url="https://notes.aarnphm.xyz" />
             <AliasLink isInternal enablePopover={false} name="stream" url="/stream" />
-            <AliasLink isInternal enablePopover={false} name="workshop" url="/lectures" />
-            <AliasLink isInternal enablePopover={false} name="arena" url="/arena" />
-            <AliasLink isInternal enablePopover={false} name="on my mind" url="/thoughts/" />
             <AliasLink isInternal enablePopover={false} name="writings" url="/posts/" />
           </address>
         </section>,
