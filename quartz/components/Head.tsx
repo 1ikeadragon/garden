@@ -9,6 +9,27 @@ import { unescapeHTML } from '../util/escape'
 import { FullSlug, getFileExtension, joinSegments, pathToRoot } from '../util/path'
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from '../util/resources'
 import { googleFontHref, googleFontSubsetHref } from '../util/theme'
+
+const MAX_EXTERNAL_PRECONNECTS = 2
+
+function collectExternalOrigins(pageOrigin: string, urls: string[]): string[] {
+  const origins: string[] = []
+  const seen = new Set<string>()
+
+  for (const value of urls) {
+    if (!URL.canParse(value)) continue
+    const parsed = new URL(value)
+    if (!['http:', 'https:'].includes(parsed.protocol)) continue
+    if (parsed.origin === pageOrigin) continue
+    if (seen.has(parsed.origin)) continue
+    seen.add(parsed.origin)
+    origins.push(parsed.origin)
+    if (origins.length >= MAX_EXTERNAL_PRECONNECTS) break
+  }
+
+  return origins
+}
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -30,6 +51,14 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === '404' ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, 'static/icon.png')
+    const dynamicPreconnectOrigins = collectExternalOrigins(url.origin, [
+      ...css.map(resource => resource.content),
+      ...js
+        .filter(resource => resource.contentType === 'external')
+        .map(resource => resource.src),
+    ]).filter(
+      origin => origin !== 'https://fonts.googleapis.com' && origin !== 'https://fonts.gstatic.com',
+    )
 
     // Url of current page
     const socialUrl =
@@ -54,8 +83,9 @@ export default (() => {
             )}
           </>
         )}
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        {dynamicPreconnectOrigins.map(origin => (
+          <link key={origin} rel="preconnect" href={origin} crossOrigin="anonymous" />
+        ))}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
