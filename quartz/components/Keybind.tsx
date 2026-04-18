@@ -57,13 +57,13 @@ export default ((userOpts?: Partial<Options>) => {
 
   const Keybind: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     return (
-      <div class={classNames(displayClass, 'keybind')} lang={'fr'}>
+      <div class={classNames(displayClass, 'keybind')} lang={'en'}>
         <kbd id="shortcut-key" data-mapping={JSON.stringify(opts.default?.map(revert))}>
           {defaultKey}
         </kbd>
         <div id="shortcut-container">
           <div id="shortcut-space">
-            <div id="title">raccourcis clavier</div>
+            <div id="title">keyboard shortcuts</div>
             <ul id="shortcut-list">
               {Object.entries(KeybindAlias).map(([key, value]) => (
                 <li>
