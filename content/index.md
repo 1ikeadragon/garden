@@ -7,4 +7,13 @@ tags:
 title: garden
 ---
 
-Scratching the itch of curiousity and building this garden with seeds of satisfaction. Don't send Hi - just speak your mind. Always open to collab or making friends.
+Scratching the itch of curiousity and building this garden with seeds of satisfaction.  
+Presently building hackbots and solving security [@HacktronAI](https://hacktron.ai).  
+History in product engineering and security consulting for global clients @SecurityReviewAI and @we45.
+
+Off-screens, find me where there's water and grass and, also in front a bigger screen, [in the cinema](https://letterboxd.com/vmread/).  
+I seldom [read too](https://fable.co/fabler/d-594451438199).  
+My [music taste](https://open.spotify.com/user/2s0e5bixt59bm5ipkdoczrbyj) is an alloy of niche artists who became my entire personality in 2020 and a good mix of whatever feels like putting on-repeat till it wears down my cochlear nerves.
+
+
+Always open to collab or making friends. Don't send Hi - just speak your mind.
