@@ -1635,39 +1635,6 @@ const ElementComponent = ((enableRecents: boolean = false) => {
 
     return (
       <>
-        <div class="wave-bg" aria-hidden="true">
-          <svg class="wave-field" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <filter id="wave-warp-a" x="-20%" y="-20%" width="140%" height="140%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.004 0.012" numOctaves="2" seed="4" stitchTiles="stitch" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" xChannelSelector="R" yChannelSelector="G" />
-              </filter>
-              <filter id="wave-warp-b" x="-20%" y="-20%" width="140%" height="140%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.003 0.009" numOctaves="3" seed="17" stitchTiles="stitch" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="110" xChannelSelector="R" yChannelSelector="G" />
-              </filter>
-              <pattern id="wave-stripes-a" x="0" y="0" width="2400" height="28" patternUnits="userSpaceOnUse">
-                <line x1="0" y1="14" x2="2400" y2="14" stroke="currentColor" stroke-width="1" />
-              </pattern>
-              <pattern id="wave-stripes-b" x="0" y="0" width="2400" height="44" patternUnits="userSpaceOnUse">
-                <line x1="0" y1="22" x2="2400" y2="22" stroke="currentColor" stroke-width="1" />
-              </pattern>
-              <pattern id="wave-dither" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
-                <rect width="1" height="1" x="0" y="0" fill="currentColor" />
-                <rect width="1" height="1" x="2" y="2" fill="currentColor" />
-              </pattern>
-            </defs>
-            <g class="wave-layer-a" filter="url(#wave-warp-a)">
-              <rect x="-200" y="-100" width="2000" height="1100" fill="url(#wave-stripes-a)" />
-            </g>
-            <g class="wave-layer-b" filter="url(#wave-warp-b)">
-              <rect x="-200" y="-100" width="2000" height="1100" fill="url(#wave-stripes-b)" />
-            </g>
-            <g class="wave-layer-dither">
-              <rect x="0" y="0" width="1600" height="900" fill="url(#wave-dither)" />
-            </g>
-          </svg>
-        </div>
         <div class="content-container">
           <Content {...componentData} />
           {enableRecents && (
@@ -2060,6 +2027,117 @@ export function renderPage(
           data-arena-subpage={isArenaSubpage}
           data-protected={componentData.fileData.frontmatter?.protected ?? false}
         >
+          <div class="site-wave-bg" aria-hidden="true">
+            <svg class="site-wave-svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <filter id="site-wave-distort-deep" x="-20%" y="-20%" width="140%" height="140%">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.003 0.011"
+                    numOctaves="2"
+                    seed="7"
+                    stitchTiles="stitch"
+                    result="noise"
+                  />
+                  <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="44"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                </filter>
+                <filter id="site-wave-distort-mid" x="-20%" y="-20%" width="140%" height="140%">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.006 0.024"
+                    numOctaves="2"
+                    seed="13"
+                    stitchTiles="stitch"
+                    result="noise"
+                  />
+                  <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="24"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                </filter>
+                <filter id="site-wave-distort-fine" x="-20%" y="-20%" width="140%" height="140%">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.011 0.05"
+                    numOctaves="2"
+                    seed="19"
+                    stitchTiles="stitch"
+                    result="noise"
+                  />
+                  <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="12"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                </filter>
+                <pattern
+                  id="site-wave-lines-deep"
+                  x="0"
+                  y="0"
+                  width="1600"
+                  height="60"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M-160 30 C 40 8, 240 52, 440 30 S 840 8, 1040 30 S 1440 52, 1640 30 S 2040 8, 2240 30"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  />
+                </pattern>
+                <pattern
+                  id="site-wave-lines-mid"
+                  x="0"
+                  y="0"
+                  width="1600"
+                  height="38"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M-140 19 C 20 6, 180 32, 340 19 S 660 6, 820 19 S 1140 32, 1300 19 S 1620 6, 1780 19 S 2100 32, 2260 19"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.85"
+                  />
+                </pattern>
+                <pattern
+                  id="site-wave-lines-fine"
+                  x="0"
+                  y="0"
+                  width="1600"
+                  height="24"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M-120 12 C 0 4, 120 20, 240 12 S 480 4, 600 12 S 840 20, 960 12 S 1200 4, 1320 12 S 1560 20, 1680 12 S 1920 4, 2040 12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.55"
+                  />
+                </pattern>
+              </defs>
+              <g class="site-wave-layer--deep" filter="url(#site-wave-distort-deep)">
+                <rect x="-220" y="-120" width="2040" height="1240" fill="url(#site-wave-lines-deep)" />
+              </g>
+              <g class="site-wave-layer--mid" filter="url(#site-wave-distort-mid)">
+                <rect x="-220" y="-120" width="2040" height="1240" fill="url(#site-wave-lines-mid)" />
+              </g>
+              <g class="site-wave-layer--fine" filter="url(#site-wave-distort-fine)">
+                <rect x="-220" y="-120" width="2040" height="1240" fill="url(#site-wave-lines-fine)" />
+              </g>
+            </svg>
+          </div>
           <main
             id="quartz-root"
             class={classNames(undefined, 'page', slug === 'index' ? 'grid' : '')}
