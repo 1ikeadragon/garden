@@ -3,7 +3,7 @@
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
   "spellcheck": true,
-  "vimMode": true,
+  "vimMode": false,
   "promptDelete": true,
   "pdfExportSettings": {
     "includeName": false,

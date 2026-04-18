@@ -1,9 +1,28 @@
 @use '../variables.scss' as *;
 
 body[data-slug='resume'] {
-  .page-content {
-    max-width: 720px;
-    margin: 0 auto;
+  @media all and ($desktop) {
+    .main-col:not(.popover *) {
+      grid-column: 4/-4;
+    }
+
+    .side-col:not(.popover *) {
+      grid-column: 5/8;
+    }
+
+    .grid {
+      --grid-end: 0;
+    }
+  }
+
+  @media all and ($tablet) {
+    .main-col:not(.popover *) {
+      grid-column: 3/-4;
+    }
+
+    .side-col:not(.popover *) {
+      grid-column: 3/-3;
+    }
   }
 
   .cv-header {
