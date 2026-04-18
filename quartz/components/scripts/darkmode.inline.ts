@@ -59,7 +59,7 @@ const readStoredPreference = (): ThemePreference => {
     return legacyTheme
   }
 
-  return 'system'
+  return 'light'
 }
 
 let activePreference: ThemePreference = readStoredPreference()
