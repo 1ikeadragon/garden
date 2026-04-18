@@ -1636,14 +1636,36 @@ const ElementComponent = ((enableRecents: boolean = false) => {
     return (
       <>
         <div class="wave-bg" aria-hidden="true">
-          <svg class="wave-layer-1" viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C180,30 360,90 540,60 C720,30 900,90 1080,60 C1260,30 1440,90 1620,60 C1800,30 1980,90 2160,60" />
-          </svg>
-          <svg class="wave-layer-2" viewBox="0 0 1600 120" preserveAspectRatio="none">
-            <path d="M0,70 C200,35 400,105 600,70 C800,35 1000,105 1200,70 C1400,35 1600,105 1800,70 C2000,35 2200,105 2400,70" />
-          </svg>
-          <svg class="wave-layer-3" viewBox="0 0 1800 120" preserveAspectRatio="none">
-            <path d="M0,55 C240,30 480,80 720,55 C960,30 1200,80 1440,55 C1680,30 1920,80 2160,55" />
+          <svg class="wave-field" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <filter id="wave-warp-a" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.004 0.012" numOctaves="2" seed="4" stitchTiles="stitch" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <filter id="wave-warp-b" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.003 0.009" numOctaves="3" seed="17" stitchTiles="stitch" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="110" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <pattern id="wave-stripes-a" x="0" y="0" width="2400" height="28" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="14" x2="2400" y2="14" stroke="currentColor" stroke-width="1" />
+              </pattern>
+              <pattern id="wave-stripes-b" x="0" y="0" width="2400" height="44" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="22" x2="2400" y2="22" stroke="currentColor" stroke-width="1" />
+              </pattern>
+              <pattern id="wave-dither" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+                <rect width="1" height="1" x="0" y="0" fill="currentColor" />
+                <rect width="1" height="1" x="2" y="2" fill="currentColor" />
+              </pattern>
+            </defs>
+            <g class="wave-layer-a" filter="url(#wave-warp-a)">
+              <rect x="-200" y="-100" width="2000" height="1100" fill="url(#wave-stripes-a)" />
+            </g>
+            <g class="wave-layer-b" filter="url(#wave-warp-b)">
+              <rect x="-200" y="-100" width="2000" height="1100" fill="url(#wave-stripes-b)" />
+            </g>
+            <g class="wave-layer-dither">
+              <rect x="0" y="0" width="1600" height="900" fill="url(#wave-dither)" />
+            </g>
           </svg>
         </div>
         <div class="content-container">

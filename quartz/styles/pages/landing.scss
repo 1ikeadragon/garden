@@ -1,19 +1,16 @@
 @use '../base.scss';
 @use '../variables.scss' as *;
 
-@keyframes wave-drift-1 {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-120px); }
+@keyframes wave-drift-a {
+  0%   { transform: translate3d(0, 0, 0) scale(1.02); }
+  50%  { transform: translate3d(-180px, -14px, 0) scale(1.05); }
+  100% { transform: translate3d(0, 0, 0) scale(1.02); }
 }
 
-@keyframes wave-drift-2 {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(80px); }
-}
-
-@keyframes wave-drift-3 {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-60px); }
+@keyframes wave-drift-b {
+  0%   { transform: translate3d(0, 0, 0) scale(1.04); }
+  50%  { transform: translate3d(140px, 10px, 0) scale(1.01); }
+  100% { transform: translate3d(0, 0, 0) scale(1.04); }
 }
 
 body[data-slug='index'] {
@@ -32,37 +29,48 @@ body[data-slug='index'] {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
 
-    svg {
+    .wave-field {
       position: absolute;
-      left: -10%;
-      width: 120%;
+      inset: 0;
+      width: 100%;
       height: 100%;
-
-      path { fill: none; }
     }
 
-    .wave-layer-1 {
-      opacity: 0.5;
-      animation: wave-drift-1 14s ease-in-out infinite;
+    rect { shape-rendering: crispEdges; }
 
-      path { stroke: var(--gray); stroke-width: 1.2; }
+    .wave-layer-a {
+      opacity: 0.55;
+      color: var(--gray);
+      transform-origin: 50% 50%;
+      animation: wave-drift-a 38s ease-in-out infinite;
     }
 
-    .wave-layer-2 {
-      opacity: 0.35;
-      animation: wave-drift-2 20s ease-in-out infinite;
-
-      path { stroke: var(--lightgray); stroke-width: 0.8; }
+    .wave-layer-b {
+      opacity: 0.32;
+      color: var(--secondary);
+      transform-origin: 50% 50%;
+      animation: wave-drift-b 52s ease-in-out infinite;
     }
 
-    .wave-layer-3 {
-      opacity: 0.3;
-      animation: wave-drift-3 26s ease-in-out infinite;
+    .wave-layer-dither {
+      opacity: 0.18;
+      color: var(--gray);
+      mix-blend-mode: multiply;
+    }
+  }
 
-      path { stroke: var(--secondary); stroke-width: 0.6; }
+  @media (prefers-reduced-motion: reduce) {
+    .wave-bg .wave-layer-a,
+    .wave-bg .wave-layer-b { animation: none; }
+  }
+
+  @media all and ($mobile) {
+    .wave-bg {
+      .wave-layer-b { display: none; }
+      .wave-layer-dither { opacity: 0.1; }
     }
   }
 
@@ -119,6 +127,16 @@ body[data-slug='index'] {
     background-color: rgb(235, 188, 186);
   }
 
+  .wave-bg {
+    .wave-layer-a { opacity: 0.45; }
+    .wave-layer-b { opacity: 0.28; }
+
+    .wave-layer-dither {
+      opacity: 0.22;
+      color: var(--darkgray);
+      mix-blend-mode: screen;
+    }
+  }
 }
 
 .notes-outer {
