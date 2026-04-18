@@ -7,4 +7,4 @@ tags:
 title: garden
 ---
 
-Welcome. This is a digital garden — a collection of posts, notes, and ideas at various stages of growth.
+Scratching the itch of curiousity and building this garden with seeds of satisfaction. Don't send Hi - just speak your mind. Always open to collab or making friends.

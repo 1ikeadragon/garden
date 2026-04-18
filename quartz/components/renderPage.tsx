@@ -1600,7 +1600,6 @@ const ElementComponent = ((enableRecents: boolean = false) => {
     const Hyperlink = HyperlinksComponent({
       children: [
         <section style={{ marginTop: '0.9em' }}>
-          <em>garden</em>
           <address class="clickable-container">
             <AliasLink isInternal enablePopover={false} name="thoughts" url="/thoughts/" />
             <AliasLink isInternal enablePopover={false} name="writings" url="/posts/" />
