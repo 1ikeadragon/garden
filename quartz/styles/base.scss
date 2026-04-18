@@ -58,34 +58,58 @@ body {
   --image-grid-fit: contain;
 }
 
+@keyframes site-wave-plane-drift-far {
+  0% { transform: translate3d(0, 0, 0) rotate(-18deg) scale(1.16); }
+  50% { transform: translate3d(-18px, 10px, 0) rotate(-17deg) scale(1.18); }
+  100% { transform: translate3d(0, 0, 0) rotate(-18deg) scale(1.16); }
+}
+
+@keyframes site-wave-plane-drift-near {
+  0% { transform: translate3d(0, 0, 0) rotate(-15deg) scale(1.18); }
+  50% { transform: translate3d(22px, -12px, 0) rotate(-16deg) scale(1.2); }
+  100% { transform: translate3d(0, 0, 0) rotate(-15deg) scale(1.18); }
+}
+
 .site-wave-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  background: var(--light);
-  isolation: isolate;
 
-  &::before,
-  &::after {
-    content: '';
+  .site-wave-svg {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  &::before {
-    inset: -22vh -18vw;
-    background: center / cover no-repeat url('/static/wave-surface-light.svg');
-    opacity: 0.98;
-    transform: rotate(-14deg) scale(1.12);
+  .site-wave-plane {
     transform-origin: 50% 50%;
   }
 
-  &::after {
-    background:
-      linear-gradient(to bottom, color-mix(in srgb, var(--light) 97%, rgba(255, 255, 255, 0)) 0%, rgba(255, 255, 255, 0) 16%),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0) 72%, color-mix(in srgb, var(--light) 84%, rgba(255, 255, 255, 0)) 90%, var(--light) 100%);
+  .site-wave-plane--far {
+    opacity: 0.74;
+    animation: site-wave-plane-drift-far 52s ease-in-out infinite;
+  }
+
+  .site-wave-plane--near {
+    opacity: 0.88;
+    animation: site-wave-plane-drift-near 44s ease-in-out infinite;
+  }
+
+  .site-wave-ribbon-instance--a,
+  .site-wave-ribbon-instance--c {
+    opacity: 0.68;
+  }
+
+  .site-wave-ribbon-instance--b,
+  .site-wave-ribbon-instance--e {
+    opacity: 0.84;
+  }
+
+  .site-wave-ribbon-instance--d {
+    opacity: 1;
   }
 }
 
@@ -95,25 +119,19 @@ body {
 }
 
 [saved-theme='dark'] .site-wave-bg {
-  background: var(--dark);
-
-  &::before {
-    background-image: url('/static/wave-surface-dark.svg');
-    opacity: 0.9;
+  .site-wave-plane--far {
+    opacity: 0.62;
   }
 
-  &::after {
-    background:
-      linear-gradient(to bottom, color-mix(in srgb, var(--dark) 95%, rgba(0, 0, 0, 0)) 0%, rgba(0, 0, 0, 0) 16%),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0) 72%, color-mix(in srgb, var(--dark) 82%, rgba(0, 0, 0, 0)) 90%, var(--dark) 100%);
+  .site-wave-plane--near {
+    opacity: 0.78;
   }
 }
 
-@media all and ($mobile) {
-  .site-wave-bg::before {
-    inset: -16vh -36vw;
-    background-position: 52% 50%;
-    transform: rotate(-11deg) scale(1.16);
+@media (prefers-reduced-motion: reduce) {
+  .site-wave-bg .site-wave-plane--far,
+  .site-wave-bg .site-wave-plane--near {
+    animation: none;
   }
 }
 

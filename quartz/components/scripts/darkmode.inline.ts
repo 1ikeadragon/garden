@@ -3,7 +3,7 @@ type ThemePreference = Theme | 'system'
 
 const PREFERENCE_STORAGE_KEY = 'theme-preference'
 const LEGACY_STORAGE_KEY = 'theme'
-const preferenceOrder: ThemePreference[] = ['light', 'dark']
+const preferenceOrder: ThemePreference[] = ['system', 'dark', 'light']
 
 const prefersDarkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
@@ -59,7 +59,7 @@ const readStoredPreference = (): ThemePreference => {
     return legacyTheme
   }
 
-  return 'light'
+  return 'system'
 }
 
 let activePreference: ThemePreference = readStoredPreference()
