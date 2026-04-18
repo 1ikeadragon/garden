@@ -62,20 +62,8 @@ export default ((userOpts?: Options) => {
 
     const MinimalFooter = () => (
       <>
-        <menu class="icons">
-          {Object.entries(links).map(([text, link]) => {
-            const label = text.toLowerCase()
-            return (
-              <li>
-                <address>
-                  <a href={link} target="_blank" aria-label={`${label}`} title={`${label}`}>
-                    {label}
-                  </a>
-                </address>
-              </li>
-            )
-          })}
-          {addHomeLink && (
+        {addHomeLink && (
+          <menu class="icons">
             <li>
               <address>
                 <a href={'/'} target="_self" class="internal">
@@ -83,20 +71,9 @@ export default ((userOpts?: Options) => {
                 </a>
               </address>
             </li>
-          )}
-        </menu>
-        <p>
-          <a
-            href="https://quartz.jzhao.xyz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Quartz links"
-          >
-            Quartz v{version}
-          </a>{' '}
-          © {year}
-          <Sha />
-        </p>
+          </menu>
+        )}
+        <p>scratch the itch</p>
       </>
     )
 

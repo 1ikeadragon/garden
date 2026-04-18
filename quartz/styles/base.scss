@@ -640,8 +640,8 @@ ol.overflow {
 
 .grid {
   display: grid;
-  grid-template-columns: 0 calc(var(--kern) * 5) repeat(9, 1fr) calc(var(--kern) * 5) 0;
-  --grid-center-width: calc(100vw - (var(--kern) * 5) - (var(--kern) * 4));
+  grid-template-columns: 0 calc(var(--kern) * 4) repeat(9, 1fr) calc(var(--kern) * 4) 0;
+  --grid-center-width: calc(100vw - (var(--kern) * 4) - (var(--kern) * 3));
   --grid-col-width: calc(var(--grid-center-width) / 9);
 }
 
@@ -674,10 +674,10 @@ ol.overflow {
   .grid {
     --grid-end: 1fr;
     --grid-left: 1fr;
-    --sidepanel-padding-right: calc(var(--grid-end) + var(--kern) * 3);
+    --sidepanel-padding-right: calc(var(--grid-end) + var(--kern) * 2);
     grid-template-columns:
-      var(--grid-left) calc(var(--kern) * 3) repeat(9, var(--grid-col-width))
-      calc(var(--kern) * 3) var(--grid-end);
+      var(--grid-left) calc(var(--kern) * 2) repeat(9, var(--grid-col-width))
+      calc(var(--kern) * 2) var(--grid-end);
   }
 
   [data-is-folder-tag='true'] {

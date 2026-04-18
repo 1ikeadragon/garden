@@ -18,11 +18,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [Component.Recommendations(), Component.Backlinks()],
   footer: Component.Footer({
     layout: 'minimal',
-    links: {
-      'CC BY-NC-SA': 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en',
-      github: 'https://github.com/aarnphm',
-      twitter: 'https://twitter.com/aarnphm',
-    },
+    links: {},
   }),
 }
 
