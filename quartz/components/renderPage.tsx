@@ -1602,7 +1602,9 @@ const ElementComponent = ((enableRecents: boolean = false) => {
         <section style={{ marginTop: '0.9em' }}>
           <em>garden</em>
           <address class="clickable-container">
+            <AliasLink isInternal enablePopover={false} name="thoughts" url="/thoughts/" />
             <AliasLink isInternal enablePopover={false} name="writings" url="/posts/" />
+            <AliasLink isInternal enablePopover={false} name="on my mind" url="/on-my-mind" />
             <AliasLink isInternal enablePopover={false} name="notes" url="/tags/" />
           </address>
         </section>,
