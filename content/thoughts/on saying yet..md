@@ -3,7 +3,6 @@ date: 2026-04-19
 title: on saying yet.
 description: you are not ready -- yet.
 tags:
-  - thoughts
   - life
 ---
 
