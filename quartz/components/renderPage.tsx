@@ -1634,16 +1634,29 @@ const ElementComponent = ((enableRecents: boolean = false) => {
     })
 
     return (
-      <div class="content-container">
-        <Content {...componentData} />
-        {enableRecents && (
-          <section class="notes-outer">
-            <RecentNotes {...componentData} />
-            <RecentPosts {...componentData} />
-          </section>
-        )}
-        <Hyperlink {...componentData} />
-      </div>
+      <>
+        <div class="wave-bg" aria-hidden="true">
+          <svg class="wave-layer-1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C180,30 360,90 540,60 C720,30 900,90 1080,60 C1260,30 1440,90 1620,60 C1800,30 1980,90 2160,60" />
+          </svg>
+          <svg class="wave-layer-2" viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <path d="M0,70 C200,35 400,105 600,70 C800,35 1000,105 1200,70 C1400,35 1600,105 1800,70 C2000,35 2200,105 2400,70" />
+          </svg>
+          <svg class="wave-layer-3" viewBox="0 0 1800 120" preserveAspectRatio="none">
+            <path d="M0,55 C240,30 480,80 720,55 C960,30 1200,80 1440,55 C1680,30 1920,80 2160,55" />
+          </svg>
+        </div>
+        <div class="content-container">
+          <Content {...componentData} />
+          {enableRecents && (
+            <section class="notes-outer">
+              <RecentNotes {...componentData} />
+              <RecentPosts {...componentData} />
+            </section>
+          )}
+          <Hyperlink {...componentData} />
+        </div>
+      </>
     )
   }
 
