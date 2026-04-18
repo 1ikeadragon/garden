@@ -1,6 +1,10 @@
-summaries:
-  count: values.length
+views:
+  - type: table
+    name: All
+    order:
+      - title
+      - date
+      - tags
 filters:
   and:
     - file.ext == "md"
-formulas: {}
