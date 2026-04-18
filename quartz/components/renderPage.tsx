@@ -1605,7 +1605,7 @@ const ElementComponent = ((enableRecents: boolean = false) => {
             <AliasLink isInternal enablePopover={false} name="writings" url="/posts/" />
             <AliasLink isInternal enablePopover={false} name="on my mind" url="/on-my-mind" />
             <AliasLink isInternal enablePopover={false} name="notes" url="/tags/" />
-            <AliasLink newTab classes={['external']} name="resume" url="/static/resume.pdf" />
+            <AliasLink isInternal enablePopover={false} name="resume" url="/resume" />
           </address>
         </section>,
         <section class="boring-legal">

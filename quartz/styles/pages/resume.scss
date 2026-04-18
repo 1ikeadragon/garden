@@ -1,0 +1,106 @@
+@use '../variables.scss' as *;
+
+body[data-slug='resume'] {
+  .page-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .cv-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--lightgray);
+
+    h1 {
+      margin-bottom: 0.15rem;
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0.25rem 0;
+      color: var(--gray);
+
+      a {
+        color: var(--darkgray);
+        text-decoration: none;
+        border-bottom: 1px solid var(--lightgray);
+        transition: border-color 0.2s ease;
+
+        &:hover {
+          border-color: var(--darkgray);
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    border-bottom: 1px solid var(--lightgray);
+    padding-bottom: 0.35rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cv-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .cv-date {
+    color: var(--gray);
+    font-size: 0.88em;
+    white-space: nowrap;
+    font-style: italic;
+  }
+
+  .cv-entry {
+    margin-bottom: 1rem;
+
+    ul {
+      margin-top: 0.35rem;
+      margin-bottom: 0;
+      padding-left: 1.2rem;
+
+      li {
+        margin-bottom: 0.2rem;
+        line-height: 1.5;
+        font-size: 0.92em;
+        color: var(--darkgray);
+      }
+    }
+
+    p {
+      margin: 0.3rem 0;
+    }
+  }
+
+  .cv-skills {
+    p {
+      margin: 0.3rem 0;
+      font-size: 0.92em;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media all and ($mobile) {
+  body[data-slug='resume'] {
+    .cv-row {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cv-date {
+      font-size: 0.82em;
+    }
+  }
+}
