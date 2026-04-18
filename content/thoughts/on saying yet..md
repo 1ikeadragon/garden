@@ -3,6 +3,7 @@ date: 2026-04-19
 title: on saying yet.
 tags:
   - thoughts
+  - life
 ---
 
 In your life, you must have come across or, are presently in a situation which demands too much of you. Too much cognitive bandwidth. Too much pre-requisite knowledge. Too much practical exposure. 
@@ -21,6 +22,7 @@ You don't know enough about ML *yet*. You haven't found a 0-day in Chrome *yet*.
 
 And yet, you will. 
 
-However, if your answer was the second one, that's a thought for another day. For now remember,
+However, if your answer was the second one, that's a thought for another day.  
+For now remember,
 
 >All is built on sand but we must build as if the sand were stone. And even if it’s not your ideal life, you can always choose it.
