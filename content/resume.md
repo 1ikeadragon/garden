@@ -1,3 +1,11 @@
+---
+date: '2026-04-19'
+title: resume
+noindex: true
+cssclasses:
+  - cv-page
+---
+
 <div class="cv-header">
 <h1>Debarshi Das</h1>
 <p><strong>Hacker | Engineer</strong></p>
@@ -69,10 +77,4 @@
 <ul>
 <li>Automated security analysis across top plugins using Semgrep + CodeQL with SARIF reporting pipelines.</li>
 </ul>
-</div>
-
-<h2>Education</h2>
-
-<div class="cv-entry">
-<div class="cv-row"><span><strong>Techno Main Salt Lake — Bachelor's in Computer Application</strong></span><span class="cv-date">2021 – 2024</span></div>
 </div>

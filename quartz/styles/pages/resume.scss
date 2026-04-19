@@ -1,6 +1,19 @@
 @use '../variables.scss' as *;
 
 body[data-slug='resume'] {
+  .byline,
+  hgroup .description {
+    display: none;
+  }
+
+  .page-content,
+  .cv-header,
+  .cv-entry,
+  .cv-skills {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia,
+      'Times New Roman', serif;
+  }
+
   @media all and ($desktop) {
     .main-col:not(.popover *) {
       grid-column: 4/-4;

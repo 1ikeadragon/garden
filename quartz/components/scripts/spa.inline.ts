@@ -1161,7 +1161,6 @@ if (!customElements.get('route-announcer')) {
 const baseUrl = new URL(document.location.toString())
 const stackedNotes = baseUrl.searchParams.get('stackedNotes')
 
-// remove elements on notes.aarnphm.xyz
 if (window.location.host === 'notes.aarnphm.xyz') {
   if (!stackedNotes || stackedNotes.length === 0) {
     const slug = 'notes'
@@ -1177,4 +1176,15 @@ if (window.location.host === 'notes.aarnphm.xyz') {
         .forEach(el => el.remove())
     })
   }
+}
+
+const isNotesPage =
+  window.location.pathname === '/notes' || window.location.pathname.startsWith('/notes/')
+if (
+  isNotesPage &&
+  !window.stacked.active &&
+  localStorage.getItem('disableStacking') !== 'true' &&
+  (!stackedNotes || stackedNotes.length === 0)
+) {
+  window.stacked.navigate(new URL(window.location.toString()))
 }
