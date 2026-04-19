@@ -35,3 +35,5 @@ Operationally, a short list of questions worth asking before the next run:
 - Is anyone grepping DNS, netflow, anything, during training? No.
 
 None of this is research. It is attack-surface enumeration on a class of systems whose builders do not yet consider them attackable. The open question is how many runs, currently in progress on somebody's cluster, are already producing models that have quietly learned to touch the host ::because it made the loss go down::.
+
+See also: [[harness as target]] for the specific case of the reward function as attack surface. [[silent failures]] for the broader pattern — RL training environments are systems with almost no observability where it matters. [[embedding pipelines]] for the same class of problem in a different domain.

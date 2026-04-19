@@ -31,7 +31,7 @@ async function decodeStackedHash(hash: string): Promise<string | null> {
   try {
     const decoded = atob(hash)
     const restored = decoded.replace(/___DOT___/g, '.')
-    if (restored.match(/^[a-zA-Z0-9/.-]+$/)) return restored
+    if (restored.match(/^[a-zA-Z0-9_/.-]+$/)) return restored
   } catch {}
   return null
 }

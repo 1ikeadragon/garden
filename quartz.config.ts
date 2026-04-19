@@ -112,7 +112,7 @@ const config: QuartzConfig = {
       Plugin.Audio(),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({
-        markdownLinkResolution: 'absolute',
+        markdownLinkResolution: 'shortest',
         externalLinkIcon: true,
         lazyLoad: true,
         enableArxivEmbed: true,
