@@ -7,23 +7,9 @@ cssclasses:
 ---
 
 <div class="cv-header">
-<h1>Debarshi Das</h1>
+<h1>Debarshi</h1>
 <p><strong>Hacker | Engineer</strong></p>
 <p><a href="mailto:vm@stateless.computer">Mail</a> · <a href="https://linkedin.com/in/debxrshi">LinkedIn</a> · <a href="https://github.com/1ikeadragon">Github</a></p>
-</div>
-
-<h2>Achievements</h2>
-
-<div class="cv-entry">
-<p><strong>Warner Bros Discovery</strong> — Critical RCE bounty</p>
-<p><strong>TikTok</strong> — Business logic vulnerability disclosure</p>
-<p><strong>Government of India (NCIIPC)</strong> — Critical infrastructure security acknowledgement</p>
-</div>
-
-<h2>Certifications</h2>
-
-<div class="cv-entry">
-<div class="cv-row"><span><strong>CREST Practitioner Security Analyst (CPSA)</strong></span><span class="cv-date">2025</span></div>
 </div>
 
 <h2>Experience</h2>
@@ -54,6 +40,20 @@ cssclasses:
 <li>Reverse engineered closed-source binaries using IDA Pro and Ghidra to reproduce exploit chains.</li>
 <li>Technical advisor for global HackerOne triage operations improving classification accuracy and turnaround efficiency.</li>
 </ul>
+</div>
+
+<h2>Certifications</h2>
+
+<div class="cv-entry">
+<div class="cv-row"><span><strong>CREST Practitioner Security Analyst (CPSA)</strong></span><span class="cv-date">2025</span></div>
+</div>
+
+<h2>Achievements</h2>
+
+<div class="cv-entry">
+<p><strong>Warner Bros Discovery</strong> — Critical RCE bounty</p>
+<p><strong>TikTok</strong> — Business logic vulnerability disclosure</p>
+<p><strong>Government of India (NCIIPC)</strong> — Critical infrastructure security acknowledgement</p>
 </div>
 
 <h2>Technical Skills</h2>

@@ -15,4 +15,4 @@ Off-screens, find me where there's water and grass and, also in front a bigger s
 My [music taste](https://open.spotify.com/user/2s0e5bixt59bm5ipkdoczrbyj) is an alloy of niche artists who became my entire personality in 2020 and a good mix of whatever feels like putting on-repeat till it wears down my cochlear
 
 
-Always open to collab or making friends. Don't send Hi - just speak your mind ![[smiley.png]]
+Always open to collab or making friends. Don't send Hi - just speak your mind <img src="./smiley.png" alt=":)" style="display:inline;vertical-align:middle;height:1.2em;width:auto;margin:0 0.1em" />
