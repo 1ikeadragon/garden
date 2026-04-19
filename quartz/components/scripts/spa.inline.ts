@@ -986,7 +986,14 @@ async function navigate(url: URL, isBack: boolean = false) {
     return await window.stacked.navigate(url)
   }
 
-  if (!isBack && stackedContainer && localStorage.getItem('disableStacking') !== 'true') {
+  const onNotesPage =
+    window.location.pathname === '/notes' || window.location.pathname.startsWith('/notes/')
+  if (
+    !isBack &&
+    onNotesPage &&
+    stackedContainer &&
+    localStorage.getItem('disableStacking') !== 'true'
+  ) {
     return await window.stacked.navigate(url)
   }
 
