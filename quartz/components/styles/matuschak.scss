@@ -7,13 +7,9 @@
 }
 
 .stacked-buttons {
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
-
-  body[data-slug^='notes'] & {
-    display: flex;
-  }
 }
 
 #stacked-note-toggle {
@@ -21,28 +17,31 @@
   position: relative;
   border: none;
   cursor: pointer;
-  width: 24px;
-  height: 18px;
+  width: 20px;
+  height: 22px;
 }
 
 .tile-stack {
   position: relative;
-  width: 24px;
-  height: 18px;
+  width: 20px;
+  height: 22px;
+  perspective: 80px;
 
   .tile {
     position: absolute;
-    width: 13px;
-    height: 2px;
-    background: var(--dark);
-    border-radius: 0.5px;
+    width: 14px;
+    height: 10px;
+    left: 3px;
+    bottom: 0;
+    background: var(--light);
+    border: 1.5px solid var(--dark);
+    border-radius: 1px;
+    transform: rotateX(64deg);
+    transform-origin: bottom center;
+    opacity: 0.8;
     transition:
       bottom 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-      left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
       opacity 0.3s ease;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
   }
 }
 
@@ -74,6 +73,10 @@ body.stack-mode > #quartz-root {
   .stacked-copy {
     display: inline-block !important;
   }
+}
+
+body:not([data-slug^='notes']) .stacked-buttons {
+  display: none !important;
 }
 
 a {

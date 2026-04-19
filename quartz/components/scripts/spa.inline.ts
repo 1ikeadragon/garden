@@ -356,7 +356,6 @@ class StackedNoteManager {
     const tiles = [...stack.children] as HTMLElement[]
     tiles.forEach((tile, i) => {
       tile.style.bottom = `${i * 3}px`
-      tile.style.left = `${i * 1.5}px`
       tile.style.opacity = `${display === 1 ? 0.8 : 0.3 + (i / (display - 1)) * 0.7}`
     })
   }
