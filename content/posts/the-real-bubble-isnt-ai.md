@@ -1,6 +1,7 @@
 ---
 date: '2026-03-15'
 title: The Real Bubble Isn't AI
+draft: true
 tags:
   - essay
 ---

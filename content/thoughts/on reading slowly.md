@@ -2,6 +2,7 @@
 date: '2026-04-17'
 title: on reading slowly.
 description: the faster you try to read, the less you remember reading.
+draft: true
 tags:
   - life
   - reading

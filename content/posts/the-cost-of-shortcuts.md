@@ -1,6 +1,7 @@
 ---
 date: '2026-04-15'
 title: The Cost of Shortcuts
+draft: true
 description: on engineering debt and the half-life of hacks
 tags:
   - essay
