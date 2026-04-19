@@ -50,7 +50,6 @@ export default (() => {
     const url = new URL(`https://${cfg.baseUrl ?? 'example.com'}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === '404' ? path : pathToRoot(fileData.slug!)
-    const iconPath = joinSegments(baseDir, 'static/icon.png')
     const dynamicPreconnectOrigins = collectExternalOrigins(url.origin, [
       ...css.map(resource => resource.content),
       ...js
@@ -117,7 +116,7 @@ export default (() => {
           </>
         )}
 
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" href="data:," />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
