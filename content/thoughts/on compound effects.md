@@ -2,6 +2,7 @@
 date: '2026-04-14'
 title: on compound effects.
 description: small things, repeated, become large things.
+draft: true
 tags:
   - life
   - engineering

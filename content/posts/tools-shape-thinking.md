@@ -1,6 +1,7 @@
 ---
 date: '2026-04-08'
 title: Tools Shape Thinking
+draft: true
 description: the medium is the message, applied to software
 tags:
   - essay

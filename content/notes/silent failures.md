@@ -2,6 +2,7 @@
 date: '2026-04-18'
 title: silent failures
 description: systems that fail without telling anyone
+draft: true
 tags:
   - notes
   - engineering

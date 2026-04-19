@@ -1,6 +1,7 @@
 ---
 date: '2026-04-19'
 title: embedding pipelines
+draft: true
 description: where embedding pipelines silently lose information
 tags:
   - notes

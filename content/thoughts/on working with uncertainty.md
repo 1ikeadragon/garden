@@ -2,6 +2,7 @@
 date: '2026-04-11'
 title: on working with uncertainty.
 description: doing the work when you do not know if the work is right.
+draft: true
 tags:
   - life
 ---

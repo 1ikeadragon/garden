@@ -1,6 +1,7 @@
 ---
 date: '2026-04-18'
 title: chesterton's fence
+draft: true
 description: the principle of not removing things you don't understand
 tags:
   - notes

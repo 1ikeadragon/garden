@@ -1,6 +1,7 @@
 ---
 date: '2026-04-12'
 title: On Building in Public
+draft: true
 description: why showing your work matters more than showing your results
 tags:
   - essay
