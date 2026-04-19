@@ -6,6 +6,61 @@ Local dev: `./quartz/dev.ts`.
 
 ---
 
+## Writing notes
+
+Content lives in `content/`. Four sections:
+
+| Section | Path | Behaviour |
+|---|---|---|
+| **notes** | `content/notes/` | Stacked notes — clicking any internal link opens it as a panel beside the current note. |
+| **writings** | `content/posts/` | Essays. Normal navigation. Folder page shows a list with tag grid (`L->ET\|A`). |
+| **thoughts** | `content/thoughts/` | Shorter reflections. Same list + tag grid layout. |
+| **on my mind** | `content/on-my-mind/` | Lines, moods, current preoccupations. Same list + tag grid layout. |
+
+### Creating a new entry
+
+Add a `.md` file in the right folder. Frontmatter at a minimum:
+
+```yaml
+---
+date: '2026-04-19'
+title: the title
+description: one-line summary
+tags:
+  - tag-one
+---
+```
+
+Filenames can have spaces — `securing RL environments.md` slugifies to `securing-rl-environments` in the URL.
+
+### Linking between entries
+
+Use wikilinks: `[[semantic search]]`. The link resolver uses the **shortest** strategy — it searches all content for a unique filename match, so you don't need folder prefixes. If two files share the same name in different folders, use the full path: `[[notes/semantic search]]`.
+
+Cross-folder links work: a note can link to `[[the-cost-of-shortcuts]]` (a post) or `[[on reading slowly]]` (a thought) without specifying the folder.
+
+### Stacked notes (notes only)
+
+When browsing any page under `/notes/`, clicking an internal link opens the target as a stacked panel alongside the current note — like [Andy Matuschak's notes](https://notes.andymatuschak.org). Subsequent clicks add more panels.
+
+- The toggle in the header (circle icon) can disable stacking — preference persists in `localStorage`.
+- Alt+click a link to append to the stack without truncating.
+- Stacked note URLs use `?stackedNotes=` params — shareable.
+- Stacking does **not** activate on posts, thoughts, or on-my-mind pages.
+
+### Folder page layout
+
+Each section's `index.md` can set `pageLayout` in frontmatter:
+
+| Layout | Code | What it renders |
+|---|---|---|
+| List + Evergreen + Article | `L->EAT` | Default. List of entries + evergreen sidebar. |
+| List + Evergreen/Tags \| Article | `L->ET\|A` | List + permanent notes + tag grid + article. Used by posts, thoughts, on-my-mind. |
+| Article \| List | `A\|L` | Article content first, list below. |
+| List only | `L` | Just the list. |
+
+---
+
 ## Markdown reference
 
 This file exists to remember what actually works in content. Nothing below is aspirational — every syntax here is wired up in [quartz/plugins/transformers/](quartz/plugins/transformers/) or [quartz/extensions/](quartz/extensions/).
