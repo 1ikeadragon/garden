@@ -61,21 +61,14 @@
   }
 }
 
-#light-toggle-system,
 #light-toggle-dark,
 #light-toggle-light {
   display: none;
 }
 
-:root:not([data-theme-mode]) #light-toggle-system,
-:root[data-theme-mode='system'] #light-toggle-system,
 :root[data-theme-mode='dark'] #light-toggle-dark,
-:root[data-theme-mode='light'] #light-toggle-light {
+:root:not([data-theme-mode='dark']) #light-toggle-light {
   display: inline-flex;
-}
-
-.ti-sun-moon::before {
-  content: '\f4a3';
 }
 
 .ti-sun-filled::before {

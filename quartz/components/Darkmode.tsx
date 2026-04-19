@@ -22,7 +22,6 @@ export default (() => {
       title="Change theme"
       aria-label="Toggle theme"
     >
-      <i class="ti ti-sun-moon" id="light-toggle-system" aria-hidden="true" />
       <i class="ti ti-moon-filled" id="light-toggle-dark" aria-hidden="true" />
       <i class="ti ti-sun-filled" id="light-toggle-light" aria-hidden="true" />
     </span>
