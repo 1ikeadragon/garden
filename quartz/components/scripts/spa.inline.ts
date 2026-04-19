@@ -356,7 +356,7 @@ class StackedNoteManager {
       // Restore dots after decoding
       const restoredPath = decoded.replace(/___DOT___/g, '.')
       // Validate the path only contains allowed characters
-      if (restoredPath.match(/^[a-zA-Z0-9/.-]+$/)) {
+      if (restoredPath.match(/^[a-zA-Z0-9_/.-]+$/)) {
         return restoredPath
       }
       throw new Error('Invalid path characters')
@@ -835,7 +835,6 @@ class StackedNoteManager {
   }
 
   async open() {
-    // We will need to construct the results from the current page, so no need to fetch here.
     const contents = Array.from(document.getElementsByClassName('popover-hint')).map(el =>
       el.cloneNode(true),
     ) as HTMLDivElement[]
@@ -851,6 +850,12 @@ class StackedNoteManager {
 
     const note = await this.createNote(0, { slug: getFullSlug(window), ...res })
     this.dag.addNode({ ...res, slug: getFullSlug(window), anchor: null, note })
+
+    document.body.classList.add('stack-mode')
+    const header = document.getElementsByClassName('header')[0] as HTMLElement
+    if (header) header.classList.add('grid', 'all-col')
+    const button = document.getElementById('stacked-note-toggle')
+    if (button) button.setAttribute('aria-checked', 'true')
 
     this.isActive = true
     await this.initFromParams()
@@ -877,9 +882,17 @@ class StackedNoteManager {
 
   async navigate(url: URL) {
     try {
-      if (!this.active) return await this.open()
+      if (!this.active) {
+        await this.open()
+        const targetSlug = this.getSlug(url)
+        const currentSlug = getFullSlug(window)
+        if (targetSlug && targetSlug !== currentSlug && targetSlug !== `${currentSlug}/index`) {
+          await this.add(url)
+          await this.render()
+        }
+        return true
+      }
 
-      // notify about to nav
       const event: CustomEventMap['prenav'] = new CustomEvent('prenav', { detail: {} })
       document.dispatchEvent(event)
 
@@ -970,6 +983,10 @@ window.stacked = stacked
 async function navigate(url: URL, isBack: boolean = false) {
   const stackedContainer = document.getElementById('stacked-notes-container')
   if (stackedContainer?.classList.contains('active')) {
+    return await window.stacked.navigate(url)
+  }
+
+  if (!isBack && stackedContainer && localStorage.getItem('disableStacking') !== 'true') {
     return await window.stacked.navigate(url)
   }
 

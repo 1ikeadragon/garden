@@ -16,6 +16,7 @@ document.addEventListener('nav', async ev => {
     const currentUrl = window.location.href
 
     if (!isChecked) {
+      localStorage.removeItem('disableStacking')
       button.setAttribute('aria-checked', 'true')
       container.classList.add('active')
       body.classList.add('stack-mode')
@@ -26,7 +27,7 @@ document.addEventListener('nav', async ev => {
       }
       window.stacked.navigate(new URL(`/${ev.detail.url}`, window.location.toString()))
     } else {
-      // Keep visual state intact until reload to prevent layout jump
+      localStorage.setItem('disableStacking', 'true')
       window.stacked.destroy()
       window.location.reload()
     }
