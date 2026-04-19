@@ -1,7 +1,3 @@
----
-title: resume
----
-
 <div class="cv-header">
 <h1>Debarshi Das</h1>
 <p><strong>Hacker | Engineer</strong></p>
