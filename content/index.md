@@ -1,10 +1,10 @@
 ---
 date: '2026-04-18'
-description: digital garden
+description: scratch the itch
 id: _index
 tags:
   - sapling
-title: garden
+title: scratch the itch
 ---
 
 Scratching the itch of curiousity and building this garden with seeds of satisfaction.  
