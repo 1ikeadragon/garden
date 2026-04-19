@@ -172,7 +172,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = userOpts =>
               }
 
               const linkTypes = {
-                isApexDomain: dest.includes(cfg.configuration.baseUrl!),
+                isApexDomain: dest.includes(cfg.configuration.baseUrl!) && !dest.startsWith('mailto:'),
                 isCslNode: classes.includes('csl-external-link'),
                 isEmbedTwitter: filterEmbedTwitter(node),
                 isArxiv: dest.includes('arxiv.org'),

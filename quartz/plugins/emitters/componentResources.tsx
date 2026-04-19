@@ -278,25 +278,8 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         yield write({ ctx, slug: name as FullSlug, ext: '.js', content: code })
       }
     },
-    externalResources: ({ cfg }) => ({
-      additionalHead: [
-        <link rel="manifest" href={`https://${cfg.configuration.baseUrl}/site.webmanifest`} />,
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={`https://${cfg.configuration.baseUrl}/apple-touch-icon.png`}
-        />,
-        <link
-          rel="android-chrome"
-          sizes="192x192"
-          href={`https://${cfg.configuration.baseUrl}/android-chrome-192x192.png`}
-        />,
-        <link
-          rel="android-chrome"
-          sizes="512x512"
-          href={`https://${cfg.configuration.baseUrl}/android-chrome-512x512.png`}
-        />,
-      ],
+    externalResources: () => ({
+      additionalHead: [],
     }),
   }
 }

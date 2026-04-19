@@ -7,7 +7,7 @@ cssclasses:
 ---
 
 <div class="cv-header">
-<h1>Debarshi</h1>
+<h1>D</h1>
 <p><strong>Hacker | Engineer</strong></p>
 <p class="cv-icons"><a href="mailto:vm@stateless.computer" title="vm@stateless.computer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a></p>
 </div>
