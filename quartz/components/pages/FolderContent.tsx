@@ -177,8 +177,8 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       if (!shouldIncludeFile(filePathStr)) return
       if (isImagesPath(fileSlug)) return
 
-      // If this slug corresponds to a markdown page we know about, just use it directly
       const md = mdBySlug.get(fileSlug)
+      if (!md && (ext === '.md' || ext === '.html')) return
       if (md) {
         if (md.frontmatter?.noindex === true) return
         // Augment missing dates so PageList can render consistently
