@@ -334,6 +334,31 @@ class StackedNoteManager {
         el.classList.toggle('dag', this.dag.has((el as HTMLAnchorElement).dataset.slug!)),
       )
     }
+    this.updateToggle()
+  }
+
+  private updateToggle() {
+    const stack = document.querySelector('#stacked-note-toggle .tile-stack') as HTMLElement
+    if (!stack) return
+
+    const count = this.isActive ? Math.max(this.dag.getOrderedNodes().length, 1) : 1
+    const display = Math.min(count, 6)
+
+    while (stack.children.length < display) {
+      const tile = document.createElement('div')
+      tile.className = 'tile'
+      stack.appendChild(tile)
+    }
+    while (stack.children.length > display) {
+      stack.removeChild(stack.lastChild!)
+    }
+
+    const tiles = [...stack.children] as HTMLElement[]
+    tiles.forEach((tile, i) => {
+      tile.style.bottom = `${i * 3}px`
+      tile.style.left = `${i * 1.5}px`
+      tile.style.opacity = `${display === 1 ? 0.8 : 0.3 + (i / (display - 1)) * 0.7}`
+    })
   }
 
   getChain() {
@@ -878,6 +903,7 @@ class StackedNoteManager {
 
     cleanupFns.forEach(fn => fn())
     cleanupFns.clear()
+    this.updateToggle()
   }
 
   async navigate(url: URL) {

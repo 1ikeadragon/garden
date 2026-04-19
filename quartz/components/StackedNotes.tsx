@@ -17,9 +17,7 @@ export default (() => {
           aria-checked="false"
         >
           <div class="tile-stack">
-            <div class="tile tile-back" />
-            <div class="tile tile-mid" />
-            <div class="tile tile-front" />
+            <div class="tile" />
           </div>
         </span>
       </div>
