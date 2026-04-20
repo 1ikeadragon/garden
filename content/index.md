@@ -8,6 +8,7 @@ title: scratch the itch
 ---
 
 Scratching the itch of curiousity and building this garden with seeds of satisfaction.  
+  
 Presently building hackbots and solving security [@HacktronAI](https://hacktron.ai)  
 
 Off-screens, find me where there's water and grass and, also in front a bigger screen, [in the cinema](https://letterboxd.com/vmread/) I seldom [read too](https://fable.co/fabler/d-594451438199)  
