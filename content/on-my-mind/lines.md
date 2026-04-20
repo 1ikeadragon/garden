@@ -14,3 +14,5 @@ If you can't control what's inside, you will never control what's outside.
 All is built on sand but we must build as if the sand were stone.
 
 Your focus determines your reality.
+
+There is time for work and there is time for love, that leaves no others time
