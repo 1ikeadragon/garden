@@ -15,4 +15,6 @@ All is built on sand but we must build as if the sand were stone.
 
 Your focus determines your reality.
 
-There is time for work and there is time for love, that leaves no others time
+There is time for work and there is time for love, that leaves no others time. 
+
+Art disturbs the comforted and comforts the disturbed.
