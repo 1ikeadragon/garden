@@ -1,6 +1,6 @@
 ---
 date: 2026-04-26
-title: on pressure, problems and pacing yourself.
+title: pressure, problems and pacing yourself.
 description: speed is not the solution or your worth
 tags:
   - career
