@@ -8,6 +8,7 @@ tags:
 Joining a new job, when you have people relying on you as the sole income stream is no less than a war.
 
 It's so easy to be tensed, have jaw and shoulders clenched trying to deliver, making an impression, doing everything all at once and more, that we forget to even take a breath for a moment; close eyes and not instantly think about the problem.  
+
 Sometimes thinking about the problem solely for the sake of it. Not even figuring a solution; just staring dead-eyed at the problem. Somehow, it feels more productive and resting feels guilty, undeserved.
 
 If you're in a *fast moving* start-up team. It is expected you will find and solve problems, mostly on your own and within timelines that stretch out every dendrite and fry all your axons.
