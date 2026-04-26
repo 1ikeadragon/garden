@@ -2,14 +2,15 @@
 @use '../variables.scss' as *;
 
 body[data-slug='index'] {
-  --landing-bg-width: clamp(180px, 38vw, 560px);
+  --landing-bg-width: clamp(140px, 22vw, 320px);
+  --landing-bg-inset: clamp(1rem, 3vw, 2.5rem);
 
   overflow-x: hidden;
   font-size: 1em;
   text-transform: lowercase;
   background-image: url('/static/fight.png');
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right var(--landing-bg-inset) bottom var(--landing-bg-inset);
   background-attachment: fixed;
   background-size: var(--landing-bg-width) auto;
 
