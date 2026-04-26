@@ -107,27 +107,28 @@
 @include font-face('Berkeley Mono', 'TX-02-ExtraBold-Oblique.woff2', 'woff2', italic, 800);
 @include font-face('Berkeley Mono', 'TX-02-Black.woff2', 'woff2', normal, 900);
 @include font-face('Berkeley Mono', 'TX-02-Black-Oblique.woff2', 'woff2', italic, 900);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Thin.woff2', 'woff2', normal, 100);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-ThinItalic.woff2', 'woff2', italic, 100);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Light.woff2', 'woff2', normal, 300);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-LightItalic.woff2', 'woff2', italic, 300);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Regular.woff2', 'woff2', normal, 400);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Italic.woff2', 'woff2', italic, 400);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Medium.woff2', 'woff2', normal, 500);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-MediumItalic.woff2', 'woff2', italic, 500);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-SemiBold.woff2', 'woff2', normal, 600);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-SemiBoldItalic.woff2', 'woff2', italic, 600);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Bold.woff2', 'woff2', normal, 700);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-BoldItalic.woff2', 'woff2', italic, 700);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Black.woff2', 'woff2', normal, 800);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-BlackItalic.woff2', 'woff2', italic, 800);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-ExtraBlack.woff2', 'woff2', normal, 900);
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Thin.woff2', 'woff2', normal, 100, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-ThinItalic.woff2', 'woff2', italic, 100, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Light.woff2', 'woff2', normal, 300, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-LightItalic.woff2', 'woff2', italic, 300, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Regular.woff2', 'woff2', normal, 400, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Italic.woff2', 'woff2', italic, 400, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Medium.woff2', 'woff2', normal, 500, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-MediumItalic.woff2', 'woff2', italic, 500, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-SemiBold.woff2', 'woff2', normal, 600, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-SemiBoldItalic.woff2', 'woff2', italic, 600, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Bold.woff2', 'woff2', normal, 700, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-BoldItalic.woff2', 'woff2', italic, 700, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Black.woff2', 'woff2', normal, 800, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-BlackItalic.woff2', 'woff2', italic, 800, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-ExtraBlack.woff2', 'woff2', normal, 900, '/static/');
 @include font-face(
   'Parclo Serif',
   'ParcloSerifStudent-ExtraBlackItalic.woff2',
   'woff2',
   italic,
-  900
+  900,
+  '/static/'
 );
-@include font-face('Parclo Serif', 'ParcloSerifStudent-Ultra.woff2', 'woff2', normal, 950);
-@include font-face('Parclo Serif', 'ParcloSerifStudent-UltraItalic.woff2', 'woff2', italic, 950);
+@include font-face('Parclo Serif', 'ParcloSerifStudent-Ultra.woff2', 'woff2', normal, 950, '/static/');
+@include font-face('Parclo Serif', 'ParcloSerifStudent-UltraItalic.woff2', 'woff2', italic, 950, '/static/');
