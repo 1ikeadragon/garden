@@ -1449,7 +1449,13 @@ export function transcludeFinal(
   })
 
   // NOTE: handling collapsible nodes
-  if (dynalist && !slug.includes('posts')) {
+  const wrapInCollapsible =
+    dynalist &&
+    !slug.includes('posts') &&
+    !slug.includes('thoughts') &&
+    !slug.includes('on-my-mind') &&
+    !slug.includes('notes')
+  if (wrapInCollapsible) {
     root.children = processHeaders(root.children as ElementContent[])
   }
 

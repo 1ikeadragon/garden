@@ -14,25 +14,13 @@ body[data-layout='technical'] {
 }
 
 body[data-layout='technical-tractatus'],
-body[data-layout='technical'],
-body[data-layout='default'] {
-  --rail-width: 0;
-
-  .collapse-rail,
-  .collapse-rail--body,
-  .collapse-line,
-  .collapse-line--before,
-  .collapse-line--after,
-  .collapse-line--body,
-  .collapse-line--spacer,
-  .collapse-line--hr {
+body[data-layout='technical'] {
+  .collapse-rail {
     width: 0;
-    background: transparent;
-  }
 
-  .collapsible-header-spacer,
-  .collapsible-header-hr {
-    display: none;
+    & > .collapse-line {
+      width: 0;
+    }
   }
 }
 
