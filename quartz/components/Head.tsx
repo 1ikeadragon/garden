@@ -117,6 +117,8 @@ export default (() => {
         )}
 
         <link rel="icon" href="data:," />
+        <link rel="shortcut icon" href="data:," />
+        <link rel="apple-touch-icon" href="data:," />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 

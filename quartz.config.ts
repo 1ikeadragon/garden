@@ -39,9 +39,9 @@ const configuration: GlobalConfiguration = {
     fontOrigin: 'local',
     typography: {
       title: 'Space Groteskque',
-      header: 'Parclo Serif',
-      body: 'PP Neue Montreal',
-      code: 'Berkeley Mono',
+      header: 'GT Sectra Display',
+      body: 'ABC Diatype Light',
+      code: 'Departure Mono',
     },
     colors: {
       lightMode: {
