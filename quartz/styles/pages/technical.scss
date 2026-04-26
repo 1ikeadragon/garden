@@ -11,7 +11,11 @@ body[data-layout='technical'] {
       display: none;
     }
   }
+}
 
+body[data-layout='technical-tractatus'],
+body[data-layout='technical'],
+body[data-layout='default'] {
   .collapse-rail {
     width: 0;
 

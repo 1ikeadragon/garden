@@ -2,8 +2,8 @@
 @use '../variables.scss' as *;
 
 body[data-slug='index'] {
-  --landing-bg-width: clamp(240px, 40vw, 620px);
-  --landing-bg-inset: 0px;
+  --landing-bg-width: clamp(260px, 44vw, 680px);
+  --landing-bg-inset: clamp(-3rem, -2vw, -0.5rem);
 
   overflow-x: hidden;
   font-size: 1em;
