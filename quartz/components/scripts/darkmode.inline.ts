@@ -17,7 +17,7 @@ const readStoredTheme = (): Theme => {
   if (isTheme(stored)) return stored
   const legacy = localStorage.getItem(LEGACY_STORAGE_KEY)
   if (isTheme(legacy)) return legacy
-  return 'light'
+  return 'dark'
 }
 
 let activeTheme: Theme = readStoredTheme()
