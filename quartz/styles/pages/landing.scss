@@ -2,14 +2,16 @@
 @use '../variables.scss' as *;
 
 body[data-slug='index'] {
+  --landing-bg-width: clamp(180px, 38vw, 560px);
+
   overflow-x: hidden;
   font-size: 1em;
   text-transform: lowercase;
   background-image: url('/static/fight.png');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: right center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: var(--landing-bg-width) auto;
 
   .landing {
     position: relative;
