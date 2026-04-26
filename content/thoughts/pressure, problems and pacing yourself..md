@@ -1,5 +1,7 @@
 ---
 date: 2026-04-26
+created: 2026-04-26
+modified: 2026-04-27
 title: pressure, problems and pacing yourself.
 description: speed is not the solution or your worth
 tags:

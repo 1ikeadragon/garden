@@ -1,5 +1,7 @@
 ---
 date: '2026-04-18'
+created: '2026-04-18'
+modified: '2026-04-26'
 title: lines
 tags:
   - personal
