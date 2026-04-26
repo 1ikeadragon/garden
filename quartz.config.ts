@@ -36,9 +36,10 @@ const configuration: GlobalConfiguration = {
   defaultDateType: 'created',
   theme: {
     cdnCaching: true,
-    fontOrigin: 'googleFonts',
+    fontOrigin: 'local',
     typography: {
-      header: { name: 'DM Serif Display', weights: [400] },
+      title: 'Space Groteskque',
+      header: 'Parclo Serif',
       body: 'PP Neue Montreal',
       code: 'Berkeley Mono',
     },
