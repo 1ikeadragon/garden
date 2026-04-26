@@ -39,8 +39,8 @@ const configuration: GlobalConfiguration = {
     fontOrigin: 'googleFonts',
     typography: {
       header: { name: 'DM Serif Display', weights: [400] },
-      body: 'Bricolage Grotesque',
-      code: 'JetBrains Mono',
+      body: 'PP Neue Montreal',
+      code: 'Berkeley Mono',
     },
     colors: {
       lightMode: {
