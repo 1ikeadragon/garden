@@ -71,6 +71,10 @@ body[data-slug='index'] {
   span[class*='rose'] {
     background-color: rgb(235, 188, 186);
   }
+
+  img[src$='smiley.png'] {
+    filter: invert(1);
+  }
 }
 
 .notes-outer {
