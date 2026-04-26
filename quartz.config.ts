@@ -36,12 +36,11 @@ const configuration: GlobalConfiguration = {
   defaultDateType: 'created',
   theme: {
     cdnCaching: true,
-    fontOrigin: 'local',
+    fontOrigin: 'googleFonts',
     typography: {
-      title: 'Space Groteskque',
-      header: 'GT Sectra Display',
-      body: 'ABC Diatype Light',
-      code: 'Departure Mono',
+      header: { name: 'DM Serif Display', weights: [400] },
+      body: 'Bricolage Grotesque',
+      code: 'JetBrains Mono',
     },
     colors: {
       lightMode: {

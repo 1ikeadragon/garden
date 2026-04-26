@@ -16,11 +16,25 @@ body[data-layout='technical'] {
 body[data-layout='technical-tractatus'],
 body[data-layout='technical'],
 body[data-layout='default'] {
-  .collapse-rail {
+  .collapse-rail,
+  .collapse-rail--body {
     width: 0;
+  }
 
-    & > .collapse-line {
-      width: 0;
+  .collapse-line,
+  .collapse-line--before,
+  .collapse-line--after,
+  .collapse-line--body,
+  .collapse-line--spacer,
+  .collapse-line--hr {
+    width: 0 !important;
+    background: transparent !important;
+  }
+
+  .collapsible-header-spacer,
+  .collapsible-header-hr {
+    .collapse-rail {
+      display: none;
     }
   }
 }
