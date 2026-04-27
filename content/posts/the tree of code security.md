@@ -2,7 +2,7 @@
 date: 2026-04-28
 created: 2026-04-28
 modified: 2026-04-28
-title: the tree of code security part 1: the seed
+title: 'the tree of code security part 1: the seed'
 description: a deep dig into the history, present and future of application security tool engineering
 draft: false
 tags:
