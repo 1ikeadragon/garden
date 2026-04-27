@@ -1,6 +1,7 @@
 @use '../../styles/variables.scss' as *;
 
-[data-slug='vibes'] {
+[data-slug='vibes'],
+[data-slug='gallery'] {
   section[class~='header'] {
     border-bottom: 0;
     padding-bottom: 0;
