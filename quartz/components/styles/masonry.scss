@@ -9,8 +9,10 @@
     height: 0;
   }
 
-  .page-footer {
+  .page-footer,
+  footer {
     display: none;
+    border: 0;
   }
 }
 
