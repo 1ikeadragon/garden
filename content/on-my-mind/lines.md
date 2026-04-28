@@ -20,3 +20,5 @@ Your focus determines your reality.
 There is time for work and there is time for love, that leaves no others time. 
 
 Art disturbs the comforted and comforts the disturbed.
+
+There's time for work and there's time for love. That leaves no others time.
