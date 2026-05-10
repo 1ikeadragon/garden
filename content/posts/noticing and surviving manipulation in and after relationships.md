@@ -6,6 +6,7 @@ title: noticing and surviving manipulation in and after relationships.
 description: abuse isn't always physical
 tags:
   - life
+draft: true
 ---
 Unreliable Narrator
 Flips between apologetic to bursting when doesn't get what they want

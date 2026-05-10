@@ -8,9 +8,9 @@ tags:
   - career
   - communication
 ---
-I have held two positions so far in my career that involved me shaping a product directly with code and feature decisions.  
+I have held three positions so far in my career that involved me shaping a product directly with code and feature decisions.  
 
-In both, I've faced a common *struggle* I'd say of how to present ideas to executives in a way that doesn't overwhelm them while, actually making sure your idea turns into a project and not get lost in Slack history.   
+In two of those, I've faced a common *struggle* I'd say of how to present ideas to executives in a way that doesn't overwhelm them while, actually making sure your idea turns into a project and not get lost in Slack history.   
 
 ## Five Temptations of the Apocalypse
 
