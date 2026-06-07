@@ -15,13 +15,15 @@ cssclasses:
 <h2>Experience</h2>
 
 <div class="cv-entry">
-<div class="cv-row"><span><strong>Founding Engineer · HacktronAI</strong></span><span class="cv-date">Apr 2026 – Present</span></div>
+<div class="cv-row"><span><strong>Founding Member of Technical Staff · HacktronAI</strong></span><span class="cv-date">Apr 2026 – Present</span></div>
 <ul>
-<li>Redesigned the <strong>repository analysis pipeline</strong> with census-driven structural classification and high-precision path inference eliminating context starvation in downstream agents while reducing runtime by an order of magnitude on large repositories.</li>
-<li>Collaborated in <strong>improving call-graph building pipeline</strong> that directly influenced downstream quality and coverage of vulnerability findings.</li>
-<li>Contributed to autonomous <strong>blackbox DAST architecture</strong> supporting authenticated scanning, reachability validation, exploit chaining, and environment-dependent vulnerability confirmation.</li>
-<li>Architected and <strong>implemented dynamic vulnerability validation</strong> for code reviews that supported custom environment builds on-demand to remain tech-stack agnostic and multi-agent system to carry out true validation and exploitation over theoretical metrics.</li>
-<li>Improved <strong>multi-agent validation precision</strong> across judge pipelines by reducing false-positive propagation through structured context enrichment.</li>
+<li>Redesigned a core segment of the analysis pipeline with structural classification replacing LLM dependency and eliminating context starvation in downstream steps while reducing runtime by an order of magnitude on large repositories.</li>
+<li>Collaborated in improving call-graph building pipeline that directly influenced downstream quality and coverage of vulnerability findings. Built and improved multi-language parsers from scratch with TreeSitter.</li>
+<li>Built global findings deduplication pipeline from scratch which identified and deduplicated findings across historical scans reducing data overload, improving user experience and also saving cost in pipeline.</li>
+<li>Architected and shipped dynamic vulnerability validation for code reviews that supported custom environment builds on-demand to remain tech-stack agnostic and multi-agent system to carry out true validation and exploitation over theoretical metrics.</li>
+<li>Improved multi-agent validation precision across judge pipelines by reducing false-positive propagation through structured context enrichment.</li>
+<li>Contributed in strategy building and executing for GTM operations and partook in client-facing calls.</li>
+<li>Ideated and shipped product UX improvments and long-term primary features.</li>
 </ul>
 </div>
 
@@ -31,12 +33,11 @@ cssclasses:
 <li>Core architect of <strong>Orchestron v2 (O2)</strong>, an autonomous pentest orchestrator spanning reverse engineering, API testing, and authenticated web-application scanning.</li>
 <li>Implemented persistent agent memory enabling multi-step vulnerability chaining and threat-scenario reasoning across attack surfaces.</li>
 <li>Built MCP servers integrating Claude and OpenAI SDK workflows for tool-augmented execution.</li>
-<li>Reduced per-review LLM cost by <strong>88%</strong> via Langfuse trace-level observability and workflow optimization.</li>
-<li>Developed SecurityReview-Kit enabling inline developer threat modeling during code generation workflows.</li>
+<li>Reduced per-review LLM cost to 1/4th via Langfuse trace-level debugging and workflow optimization.</li>
+<li>Developed VibeReview enabling threat modeling during code generation workflows.</li>
 <li>Automated DevSecOps scanning pipelines adopted org-wide, reducing vulnerability backlog by <strong>90%</strong>.</li>
 <li>Performed security architecture reviews for multi-tenant Kubernetes ML inference systems (PyTorch, Ray Serve).</li>
 <li>Audited legacy C/C++ enterprise codebases uncovering memory-safety and privilege-escalation vulnerabilities.</li>
-<li>Designed libAFL fuzzing harnesses discovering parser corruption and deserialization flaws.</li>
 <li>Reverse engineered closed-source binaries using IDA Pro and Ghidra to reproduce exploit chains.</li>
 <li>Technical advisor for global HackerOne triage operations improving classification accuracy and turnaround efficiency.</li>
 </ul>
