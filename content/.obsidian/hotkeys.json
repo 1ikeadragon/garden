@@ -245,14 +245,6 @@
       "key": "C"
     }
   ],
-  "editor:insert-codeblock": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Z"
-    }
-  ],
   "app:toggle-right-sidebar": [
     {
       "modifiers": [

@@ -121,6 +121,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: 'katex', customMacros, katexOptions }),
       Plugin.GitHub({
+        repository: 'https://github.com/aarnphm/aarnphm.github.io',
         internalLinks: [
           'livingalonealone.com',
           'bentoml.com',

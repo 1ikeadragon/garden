@@ -1,12 +1,24 @@
 ---
 
 ---
-Founding Engineer sounds much more sexier than it is if you don't pick the right horse to place your bet.  
+Founding Engineer sounds much more sexier than it is if you bet on the wrong horse.
 
-Because depending on the horse, you will be losing out financially if the TC is very equity-heavy and mentally, once cuz of startup hustle and twice cuz of TC breakdown.  
+Because depending on the horse, you will be losing out; once cuz of startup hustle and twice cuz of equity value plummet.  
 
 Startups are always a gamble but if you do your due diligence, you can always skew the odds in your favour.
-## Market Research
-## Funding and Valuation
-## Customer Obesession
-## vs. Frontier
+## market research
+### traction
+### problem relevance
+### revenue split
+more --> better , easy to repeat GTM
+## founder history
+## funding and valuation
+## customer obsession
+## vs. frontier
+This is a big argument that often spurs up 
+## distribution strategy
+Enough about the economics but now about the culture.
+## favouritism
+## delivery expectations
+## acknowledgement
+## reciprocation

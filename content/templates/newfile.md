@@ -1,9 +1,9 @@
 ---
-date: '{{date:YYYY-MM-DD}}'
+date: '<% tp.date.now("YYYY-MM-DD") %>'
 description: null
 id: null
-modified: '{{date:YYYY-MM-DD}} {{time:HH:mm:SS}} GMT{{time:Z}}'
+modified: '<% tp.date.now("YYYY-MM-DD HH:mm:ss [GMT]Z") %>'
 tags:
   - seed
-title: null
+title: '<% tp.file.title %>'
 ---

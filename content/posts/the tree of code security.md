@@ -10,9 +10,9 @@ tags:
   - engineering
 ---
 
-SAST tools are driving modern day code security. As simple as adding simple Github App into your pipeline to promote yourself from DevOps to DevSecOps Engineer.  
+SAST tools are driving modern day code security. As simple as adding simple Github App into your pipeline to promote yourself from DevOps to DevSecOps Engineer
 
-But there's something common between all your favourite code security tooling, even the AI-native ones. They all build upon the branches of a tree called the Abstract Syntax Tree. But why? And, how?  
+But there's something common between all your favourite code security tooling, even the AI-native ones. They all build upon the branches of a tree called the Abstract Syntax Tree. But why? And, how?
 
 This will be answered in a three-part series where we'll start by revisiting the origins of code security and static analysis tooling, explore the current adopted paradigms and peak into the future.
 
