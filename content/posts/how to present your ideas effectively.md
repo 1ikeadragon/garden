@@ -7,6 +7,7 @@ description: your presentation matters more than your suggestion
 tags:
   - career
   - communication
+draft: true
 ---
 I have held three positions so far in my career that involved me shaping a product directly with code and feature decisions.  
 

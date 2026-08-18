@@ -323,5 +323,13 @@
       ],
       "key": "S"
     }
+  ],
+  "paper_importer:import_pdf_from_arxiv": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "'"
+    }
   ]
 }

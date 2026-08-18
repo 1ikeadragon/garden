@@ -6,6 +6,7 @@ title: pressure, problems and pacing yourself.
 description: speed is not the solution or your worth
 tags:
   - career
+draft: true
 ---
 Joining a new job when you have people relying on you as the sole bread-winner is no less than a war.
 

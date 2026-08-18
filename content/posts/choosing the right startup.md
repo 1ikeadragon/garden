@@ -1,5 +1,6 @@
 ---
 
+draft: true
 ---
 Founding Engineer sounds much more sexier than it is if you bet on the wrong horse.
 

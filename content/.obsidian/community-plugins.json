@@ -7,10 +7,13 @@
   "obsidian-citation-plugin",
   "obsidian-metadata",
   "hot-reload",
-  "obsidian-sidenotes",
   "obsidian-quartz-runner",
-  "templater-obsidian",
   "obsidian-style-settings",
   "pseudocode-in-obs",
-  "obsidian-tikzjax"
+  "obsidian-tikzjax",
+  "dataview",
+  "omnisearch",
+  "templater-obsidian",
+  "paper_importer",
+  "papers"
 ]

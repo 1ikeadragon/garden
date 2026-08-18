@@ -1452,7 +1452,6 @@ export function transcludeFinal(
   const wrapInCollapsible =
     dynalist &&
     !slug.includes('posts') &&
-    !slug.includes('thoughts') &&
     !slug.includes('on-my-mind') &&
     !slug.includes('notes')
   if (wrapInCollapsible) {
@@ -1591,11 +1590,6 @@ const HyperlinksComponent = ((props?: { children: JSX.Element[] }) => {
 
 const ElementComponent = ((enableRecents: boolean = false) => {
   const Content = ContentConstructor()
-  const RecentNotes = NotesComponent({
-    header: 'recent',
-    slug: 'thoughts/' as SimpleSlug,
-    numLimits: 9,
-  })
   const RecentPosts = NotesComponent({
     header: 'writing',
     slug: 'posts/' as SimpleSlug,
@@ -1607,12 +1601,10 @@ const ElementComponent = ((enableRecents: boolean = false) => {
       children: [
         <section style={{ marginTop: '0.9em' }}>
           <address class="clickable-container">
-            <AliasLink isInternal enablePopover={false} name="thoughts" url="/thoughts/" />
             <AliasLink isInternal enablePopover={false} name="writings" url="/posts/" />
             <AliasLink isInternal enablePopover={false} name="on my mind" url="/on-my-mind" />
             <AliasLink isInternal enablePopover={false} name="notes" url="/notes/" />
             <AliasLink isInternal enablePopover={false} name="gallery" url="/gallery" />
-            <AliasLink isInternal enablePopover={false} name="resume" url="/resume" />
           </address>
         </section>,
         <section class="boring-legal">
@@ -1647,7 +1639,6 @@ const ElementComponent = ((enableRecents: boolean = false) => {
           <Content {...componentData} />
           {enableRecents && (
             <section class="notes-outer">
-              <RecentNotes {...componentData} />
               <RecentPosts {...componentData} />
             </section>
           )}

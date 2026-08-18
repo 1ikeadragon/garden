@@ -4,6 +4,7 @@ title: resume
 noindex: true
 cssclasses:
   - cv-page
+draft: true
 ---
 
 <div class="cv-header">
