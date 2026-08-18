@@ -233,7 +233,7 @@ document.addEventListener('nav', e => {
       name: 'x.com (formerly Twitter)',
       auxInnerHtml: `<svg width="1em" height="1em"><use href="#twitter-icon" /></svg>`,
       onClick: () => {
-        window.location.href = 'https://x.com/aarnphm'
+        window.location.href = 'https://x.com/iminurputer'
       },
     },
     {

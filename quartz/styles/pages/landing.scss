@@ -4,13 +4,14 @@
 body[data-slug='index'] {
   --landing-bg-width: clamp(260px, 44vw, 680px);
   --landing-bg-inset: clamp(-3rem, -2vw, -0.5rem);
+  --landing-bg-edge: calc(var(--landing-bg-width) * -0.204);
 
   overflow-x: hidden;
   font-size: 1em;
   text-transform: lowercase;
   background-image: url('/static/fight.webp');
   background-repeat: no-repeat;
-  background-position: right var(--landing-bg-inset) bottom var(--landing-bg-inset);
+  background-position: right var(--landing-bg-edge) bottom var(--landing-bg-inset);
   background-attachment: fixed;
   background-size: var(--landing-bg-width) auto;
 

@@ -6,7 +6,7 @@ title: on saying yet.
 description: you are not ready — yet.
 tags:
   - life
-draft: true
+draft: false
 ---
 
 In your life, you must have come across or, are presently in a situation which demands too much of you. Too much cognitive bandwidth. Too much pre-requisite knowledge. Too much practical exposure. 
